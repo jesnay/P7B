@@ -32,7 +32,7 @@ function App() {
         mapStyle="mapbox://styles/stjesnay/clxg1gs3y006901qrcfkpap2j"
       >
         <Marker longitude={98.4223534} latitude={7.9411625} anchor="bottom">
-          <img src="./assets/markers/mapbox-icon.png" />
+          <img src="/assets/markers/test_marker.svg" />
         </Marker>
       </ReactMapGL>
     </div>
