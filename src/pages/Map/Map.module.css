@@ -1,0 +1,10 @@
+.Map {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Map :global button {
+  background: none;
+  border: none;
+}

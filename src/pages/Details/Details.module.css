@@ -1,0 +1,19 @@
+.Details {
+  position: relative;
+  z-index: 1;
+  background-color: aliceblue;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Details :global h1 {
+  margin: 0px;
+}
+
+.Details :global .DraggablePopup {
+  cursor: grab;
+}
+
+.Details :global .DraggablePopup:active {
+  cursor: grabbing;
+}
