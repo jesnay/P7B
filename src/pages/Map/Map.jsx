@@ -30,7 +30,7 @@ function ActivityMap() {
         {...viewport}
         mapboxAccessToken={token}
         onMove={(evt) => setViewport(evt.viewState)}
-        mapStyle="mapbox://styles/stjesnay/clxg1gs3y006901qrcfkpap2j"
+        mapStyle="mapbox://styles/stjesnay/clxg1yzc2007301pc4ard48tg"
       >
         <Marker longitude={98.4223534} latitude={7.9411625} anchor="bottom">
           <button
