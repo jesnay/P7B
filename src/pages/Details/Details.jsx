@@ -6,6 +6,7 @@ import styles from "./Details.module.css";
 function Details({ setSelectedActivity }) {
   const popupContentRef = useRef(null);
 
+  //in seperate Datei als Funktion auslagern
   useEffect(() => {
     if (popupContentRef.current) {
       const position = { x: 0, y: 0 };
