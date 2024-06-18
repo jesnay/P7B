@@ -6,10 +6,11 @@ import styles from "./Details.module.css";
 function Details({ setSelectedActivity }) {
   const popupContentRef = useRef(null);
 
-  //in seperate Datei als Funktion auslagern
+  //in separate Datei als Funktion auslagern
   useEffect(() => {
     if (popupContentRef.current) {
       const position = { x: 0, y: 0 };
+      let isRotated = false;
 
       interact(popupContentRef.current).draggable({
         listeners: {
@@ -20,9 +21,12 @@ function Details({ setSelectedActivity }) {
             position.x += event.dx;
             position.y += event.dy;
 
-            event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+            event.target.style.transform = `translate(${position.x}px, ${position.y}px) ${isRotated ? 'rotate(180deg)' : ''}`;
           },
         },
+      }).on('hold', function (event) {
+        isRotated = !isRotated;
+        event.target.style.transform = `translate(${position.x}px, ${position.y}px) ${isRotated ? 'rotate(180deg)' : ''}`;
       });
     }
   }, []);
