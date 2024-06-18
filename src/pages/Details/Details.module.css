@@ -17,3 +17,12 @@
 .Details :global .DraggablePopup:active {
   cursor: grabbing;
 }
+
+.rotate {
+  transform: rotate(45deg); /* Example rotation */
+}
+
+.tapTarget {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Include other styles for your tap target here */
+}
