@@ -1,0 +1,53 @@
+{
+  "details": [
+    {
+      "name": "activity1",
+      "time": "",
+      "date": "",
+      "adress": "",
+      "participants": "",
+      "bookingQR": "",
+      "description": "",
+      "guide": "",
+      "checkList": [],
+      "checkListQR": "",
+      "tags": {
+        "highIntensity": true,
+        "lowIntensity": false,
+        "water": false,
+        "category2": false
+      }
+    },
+    {
+      "name": "activity2",
+      "time": "",
+      "date": "",
+      "adress": "",
+      "participants": "",
+      "bookingQR": "",
+      "description": "",
+      "guide": "",
+      "checkList": [],
+      "checkListQR": "",
+      "tags": {
+        "highIntensity": true,
+        "lowIntensity": false,
+        "water": false,
+        "category2": false
+      }
+    }
+  ],
+  "gallery": ["item1", "item2", "item3"],
+  "profiles": [
+    {
+      "name": "name1",
+      "arrival": "X days ago",
+      "leave": "X days"
+    },
+    {
+      "name": "name2",
+      "arrival": "X days ago",
+      "leave": "X days"
+    }
+  ]
+}
