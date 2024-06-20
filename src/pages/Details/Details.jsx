@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
 import { Popup } from "react-map-gl";
 import styles from "./Details.module.css";
+import Acitivity from "../../data/activity.json";
 
-function Details({ setSelectedActivity }) {
+function Details({ selectedActivity, setSelectedActivity }) {
+  console.log("Details" + selectedActivity);
+  console.log(selectedActivity.name);
   const popupContentRef = useRef(null);
 
   //in separate Datei als Funktion auslagern
@@ -40,15 +43,15 @@ function Details({ setSelectedActivity }) {
   return (
     <div className={styles.Details}>
       <Popup
-        latitude={7.9411625}
-        longitude={98.4223534}
+        latitude={selectedActivity.latitude}
+        longitude={selectedActivity.longitude}
         closeOnClick={false}
         onClose={() => setSelectedActivity(null)}
         anchor="top"
       >
         <div ref={popupContentRef} className={`${styles.DraggablePopup}`}>
-          <h1>Headline</h1>
-          <div>This is an example text as information</div>
+          <h1>{selectedActivity.name}</h1>
+          <div>{selectedActivity.description}</div>
         </div>
       </Popup>
     </div>
