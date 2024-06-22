@@ -1,49 +1,40 @@
 import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
 import { Popup } from "react-map-gl";
-import styles from "./Details.module.css";
+import styles from "./Details.module.css"; // Ensure correct import path
 
 function Details({ setSelectedActivity }) {
-  const popupContentRef = useRef(null);
+  const popupRef = useRef(null);
 
-  //in separate Datei als Funktion auslagern
   useEffect(() => {
-    if (popupContentRef.current) {
-      const position = { x: 0, y: 0 };
+    if (popupRef.current) {
       let isRotated = false;
 
-      interact(popupContentRef.current).draggable({
-        listeners: {
-          start(event) {
-            console.log(event.type, event.target);
-          },
-          move(event) {
-            position.x += event.dx;
-            position.y += event.dy;
-
-            event.target.style.transform = `translate(${position.x}px, ${position.y}px) ${isRotated ? 'rotate(180deg)' : ''}`;
-          },
-        },
-      }).on('hold', function (event) {
+      interact(popupRef.current).on('tap', function (event) {
         isRotated = !isRotated;
-        event.target.style.transform = `translate(${position.x}px, ${position.y}px) ${isRotated ? 'rotate(180deg)' : ''}`;
+        const rotationDegree = isRotated ? 180 : 0;
+        event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
       });
     }
   }, []);
 
   return (
-    <Popup
-      latitude={7.9411625}
-      longitude={98.4223534}
-      closeOnClick={false}
-      onClose={() => setSelectedActivity(null)}
-      anchor="top"
-    >
-      <div ref={popupContentRef} className={`${styles.DraggablePopup}`}>
-        <h1>Headline</h1>
-        <div>This is an example text as information</div>
-      </div>
-    </Popup>
+    <div className={styles.Container}>
+      <Popup
+        latitude={7.9411625}
+        longitude={98.4223534}
+        closeOnClick={false}
+        onClose={() => setSelectedActivity(null)}
+        anchor="top"
+      >
+        <div ref={popupRef} className={styles.HeaderContainer}>
+          <div className={styles.Content}>
+            <h1>Headline</h1>
+            <p>This is an example text as information</p>
+          </div>
+        </div>
+      </Popup>
+    </div>
   );
 }
 

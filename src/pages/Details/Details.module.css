@@ -6,16 +6,36 @@
   height: fit-content;
 }
 
-.Details :global h1 {
+/* .Text h1 {
   margin: 0px;
+  background-color: pink;
 }
 
-.Details :global .DraggablePopup {
-  cursor: grab;
+.Text p {
+  margin: 0px;
+  background-color: blue;
+} */
+
+/* Details.module.css */
+.Container {
+  position: relative;
 }
 
-.Details :global .DraggablePopup:active {
-  cursor: grabbing;
+.HeaderContainer {
+  transition: transform 0.5s ease-in-out; /* Smooth rotation animation */
+  transform-origin: center center; /* Rotate around the center */
+}
+
+.Content {
+  padding: 10px;
+  background-color: white; /* Adjust as necessary */
+  border: 1px solid #ccc; /* Adjust as necessary */
+  border-radius: 5px; /* Adjust as necessary */
+}
+
+.Container {
+  margin: 5px;
+  background-color: rgb(106, 160, 100);
 }
 
 .rotate {
@@ -26,3 +46,4 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   /* Include other styles for your tap target here */
 }
+
