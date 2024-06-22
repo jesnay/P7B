@@ -1,0 +1,30 @@
+.PopupCustom {
+  background: transparent;
+  box-shadow: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-content {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-tip {
+  display: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-close-button {
+  display: none !important;
+}
+
+.Slider :global .slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.7;
+}
+
+.Slider :global .activeSlide {
+  transform: scale(1);
+  transition: transform 300ms;
+  opacity: 1;
+}
