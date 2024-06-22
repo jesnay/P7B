@@ -70,14 +70,36 @@
   "gallery": ["item1", "item2", "item3"],
   "profiles": [
     {
-      "name": "name1",
-      "arrival": "X days ago",
-      "leave": "X days"
+      "id": 0,
+      "name": "Sophie",
+      "arrival": "6 days ago",
+      "leave": "3 days",
+      "image": "../../assets/profiles/profile_0.png",
+      "activities": [0, 1, 2]
     },
     {
+      "id": 1,
       "name": "name2",
       "arrival": "X days ago",
-      "leave": "X days"
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_1.png",
+      "activities": [0, 2]
+    },
+    {
+      "id": 2,
+      "name": "name3",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_2.png",
+      "activities": [1, 2]
+    },
+    {
+      "id": 3,
+      "name": "name4",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1]
     }
   ]
 }

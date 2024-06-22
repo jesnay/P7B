@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
 import { Popup } from "react-map-gl";
 import styles from "./Details.module.css";
-import Acitivity from "../../data/activity.json";
+
+//Jenny: Popup anhängig der geklickten Aktivität anzeigen
 
 function Details({ selectedActivity, setSelectedActivity }) {
   console.log("Details" + selectedActivity);
@@ -13,7 +14,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
     if (popupContentRef.current) {
       let isRotated = false;
 
-      interact(popupContentRef.current).on('tap', function (event) {
+      interact(popupContentRef.current).on("tap", function (event) {
         isRotated = !isRotated;
         const rotationDegree = isRotated ? 180 : 0;
         event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
