@@ -9,34 +9,15 @@ function Details({ selectedActivity, setSelectedActivity }) {
   console.log(selectedActivity.name);
   const popupContentRef = useRef(null);
 
-  //in separate Datei als Funktion auslagern
   useEffect(() => {
     if (popupContentRef.current) {
-      const position = { x: 0, y: 0 };
       let isRotated = false;
 
-      interact(popupContentRef.current)
-        .draggable({
-          listeners: {
-            start(event) {
-              console.log(event.type, event.target);
-            },
-            move(event) {
-              position.x += event.dx;
-              position.y += event.dy;
-
-              event.target.style.transform = `translate(${position.x}px, ${
-                position.y
-              }px) ${isRotated ? "rotate(180deg)" : ""}`;
-            },
-          },
-        })
-        .on("hold", function (event) {
-          isRotated = !isRotated;
-          event.target.style.transform = `translate(${position.x}px, ${
-            position.y
-          }px) ${isRotated ? "rotate(180deg)" : ""}`;
-        });
+      interact(popupContentRef.current).on('tap', function (event) {
+        isRotated = !isRotated;
+        const rotationDegree = isRotated ? 180 : 0;
+        event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
+      });
     }
   }, []);
 
