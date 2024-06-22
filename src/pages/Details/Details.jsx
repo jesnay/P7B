@@ -1,16 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
 import { Popup } from "react-map-gl";
-import styles from "./Details.module.css"; // Ensure correct import path
+import styles from "./Details.module.css";
+import Acitivity from "../../data/activity.json";
 
-function Details({ setSelectedActivity }) {
-  const popupRef = useRef(null);
+function Details({ selectedActivity, setSelectedActivity }) {
+  console.log("Details" + selectedActivity);
+  console.log(selectedActivity.name);
+  const popupContentRef = useRef(null);
 
   useEffect(() => {
-    if (popupRef.current) {
+    if (popupContentRef.current) {
       let isRotated = false;
 
-      interact(popupRef.current).on('tap', function (event) {
+      interact(popupContentRef.current).on('tap', function (event) {
         isRotated = !isRotated;
         const rotationDegree = isRotated ? 180 : 0;
         event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
@@ -19,19 +22,17 @@ function Details({ setSelectedActivity }) {
   }, []);
 
   return (
-    <div className={styles.Container}>
+    <div className={styles.Details}>
       <Popup
-        latitude={7.9411625}
-        longitude={98.4223534}
+        latitude={selectedActivity.latitude}
+        longitude={selectedActivity.longitude}
         closeOnClick={false}
         onClose={() => setSelectedActivity(null)}
         anchor="top"
       >
-        <div ref={popupRef} className={styles.HeaderContainer}>
-          <div className={styles.Content}>
-            <h1>Headline</h1>
-            <p>This is an example text as information</p>
-          </div>
+        <div ref={popupContentRef} className={`${styles.DraggablePopup}`}>
+          <h1>{selectedActivity.name}</h1>
+          <div>{selectedActivity.description}</div>
         </div>
       </Popup>
     </div>
