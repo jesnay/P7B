@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMapGL from "react-map-gl";
 import Map, { Marker, Popup } from "react-map-gl";
 import styles from "./Map.module.css";
@@ -8,6 +8,8 @@ import OptionButtons from "../../components/OptionButtons/OptionButtons";
 //Jenny: Integration der Mapbox API, Generierung der Aktivitäten-Markers
 
 function ActivityMap() {
+  const [selectedActivity, setSelectedActivity] = useState(null);
+
   //Definiert den Startpunkt der Map
   const [viewport, setViewport] = useState({
     latitude: 7.9411625,
@@ -16,8 +18,6 @@ function ActivityMap() {
     height: "100vh",
     zoom: 13,
   });
-
-  const [selectedActivity, setSelectedActivity] = useState(null);
 
   const token = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -29,6 +29,7 @@ function ActivityMap() {
       </div>
     );
   }
+
   return (
     <div className={styles.Map}>
       <ReactMapGL
@@ -50,7 +51,6 @@ function ActivityMap() {
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedActivity(item);
-                  console.log(selectedActivity);
                 }}
               >
                 <img src={item.markerImage} />
@@ -61,19 +61,8 @@ function ActivityMap() {
 
         {selectedActivity ? (
           //Wenn eine Aktivität angeklickt wurde werden 3 Optionen (details, profiles und gallery) zur auswahl angezeigt
-          <div>
+          <div className={styles.Options}>
             <OptionButtons
-              type="details"
-              selectedActivity={selectedActivity}
-              setSelectedActivity={setSelectedActivity}
-            ></OptionButtons>
-            <OptionButtons
-              type="profiles"
-              selectedActivity={selectedActivity}
-              setSelectedActivity={setSelectedActivity}
-            ></OptionButtons>
-            <OptionButtons
-              type="gallery"
               selectedActivity={selectedActivity}
               setSelectedActivity={setSelectedActivity}
             ></OptionButtons>
@@ -85,13 +74,3 @@ function ActivityMap() {
 }
 
 export default ActivityMap;
-
-/*<Details
-            selectedActivity={selectedActivity}
-            setSelectedActivity={setSelectedActivity}
-          ></Details>*/
-
-/*<Profiles
-            selectedActivity={selectedActivity}
-            setSelectedActivity={setSelectedActivity}
-          />*/

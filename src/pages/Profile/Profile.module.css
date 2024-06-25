@@ -19,6 +19,7 @@
 
 .Slider :global .carousel {
   width: 200px;
+  display: flex;
 }
 
 .Slider :global .slide {

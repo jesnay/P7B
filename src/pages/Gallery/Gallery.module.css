@@ -1,0 +1,18 @@
+.PopupCustom {
+  background: transparent;
+  box-shadow: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-content {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-tip {
+  display: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-close-button {
+  display: none !important;
+}
