@@ -14,6 +14,7 @@
       "bookingQR": "",
       "description": "This is an example text as information",
       "guide": "",
+      "guideImage": "",
       "checkList": [],
       "checkListQR": "",
       "tags": {
@@ -28,7 +29,7 @@
       "name": "activity2",
       "longitude": 98.42035341630495,
       "latitude": 7.937154466832397,
-      "markerImage": "/assets/markers/test_marker.svg", 
+      "markerImage": "/assets/markers/test_marker.svg",
       "activityImage": "/assets/activities/activityTest.JPG",
       "time": "",
       "date": "",
@@ -70,7 +71,20 @@
       }
     }
   ],
-  "gallery": ["item1", "item2", "item3"],
+  "gallery": [
+    {
+      "activity": 0,
+      "images": ["/assets/gallery/00/00_01.png"]
+    },
+    {
+      "activity": 1,
+      "images": ["/assets/gallery/00/00_01.png"]
+    },
+    {
+      "activity": 2,
+      "images": ["/assets/gallery/00/00_01.png"]
+    }
+  ],
   "profiles": [
     {
       "id": 0,

@@ -29,6 +29,7 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
     speed: 500,
     slidesToShow: 1,
     vertical: true,
+    verticalSwiping: true,
     centerMode: true,
     arrows: false,
     beforeChange: (current, next) => setImageIndex(next),
