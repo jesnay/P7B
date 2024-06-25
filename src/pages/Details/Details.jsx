@@ -4,6 +4,7 @@ import { Popup } from "react-map-gl";
 import styles from "./Details.module.css";
 
 //Jenny: Popup anhängig der geklickten Aktivität anzeigen
+import DetailCard from "../../components/DetailCard/DetailCard";
 
 function Details({ selectedActivity, setSelectedActivity }) {
   console.log("Details" + selectedActivity);
@@ -20,6 +21,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
         event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
       });
     }
+
   }, []);
 
   return (
@@ -32,8 +34,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
         anchor="top"
       >
         <div ref={popupContentRef} className={`${styles.DraggablePopup}`}>
-          <h1>{selectedActivity.name}</h1>
-          <div>{selectedActivity.description}</div>
+          <DetailCard />
         </div>
       </Popup>
     </div>
