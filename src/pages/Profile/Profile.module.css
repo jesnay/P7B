@@ -2,7 +2,7 @@
   background: transparent;
   box-shadow: none;
 }
-
+/*hier das stylesheet hier rein bringen*/
 .PopupCustom :global .mapboxgl-popup-content {
   background: transparent;
   box-shadow: none;
