@@ -17,14 +17,18 @@
   display: none !important;
 }
 
+.Slider :global .carousel {
+  width: 200px;
+}
+
 .Slider :global .slide {
   transform: scale(0.7);
-  transition: transform 300ms;
+  transition: transform 500ms;
   opacity: 0.7;
 }
 
 .Slider :global .activeSlide {
   transform: scale(1);
-  transition: transform 300ms;
+  transition: transform 500ms;
   opacity: 1;
 }

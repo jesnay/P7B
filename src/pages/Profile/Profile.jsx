@@ -26,7 +26,7 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
   const settings = {
     infinite: true,
     lazyLoad: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
     vertical: true,
     centerMode: true,
@@ -52,8 +52,10 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
                 className={index === imageIndex ? "slide activeSlide" : "slide"}
                 key={index}
               >
-                {console.log("id: " + profile.id)}
-                <ProfileBubble profileID={profile.id}></ProfileBubble>
+                <ProfileBubble
+                  profileID={profile.id}
+                  active={index === imageIndex ? true : false}
+                ></ProfileBubble>
               </div>
             ))}
           </Slider>

@@ -4,6 +4,7 @@
   align-items: flex-end;
 }
 .ProfileBubble :global img {
+  position: relative;
   width: 150px;
   height: auto;
   border-radius: 50%;
@@ -12,11 +13,17 @@
 }
 
 .ProfileBubble :global .text {
+  visibility: hidden;
+}
+
+.ProfileBubble :global .activeText {
+  position: absolute;
   color: rgba(255, 255, 255);
-  position: relative;
   z-index: 1;
   text-align: center;
   margin-bottom: 15px;
+  width: 150px;
+  visibility: visible;
 }
 
 .ProfileBubble :global .name {

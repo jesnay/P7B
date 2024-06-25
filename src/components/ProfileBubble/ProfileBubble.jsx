@@ -4,19 +4,18 @@ import Profiles from "../../data/activity.json";
 
 //Jenny: Einzelne Profilbubble
 
-function ProfileBubble({ profileID }) {
-  console.log("activityID: " + profileID);
+function ProfileBubble({ profileID, active }) {
   return (
     <div className={styles.ProfileBubble}>
       <img src={Profiles.profiles[profileID].image}></img>
-      {/*<div className="text">
-        <p className="name">{Profiles.profiles[0].name}</p>
+      <div className={active === true ? "text activeText" : "text"}>
+        <p className="name">{Profiles.profiles[profileID].name}</p>
         <p className="timeframe">
-          arrived {Profiles.profiles[0].arrival}
+          arrived {Profiles.profiles[profileID].arrival}
           <br />
-          leaves in {Profiles.profiles[0].leave}
+          leaves in {Profiles.profiles[profileID].leave}
         </p>
-      </div>*/}
+      </div>
     </div>
   );
 }
