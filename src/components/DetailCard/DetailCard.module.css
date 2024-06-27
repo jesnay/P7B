@@ -1,1 +1,103 @@
+@font-face {
+    font-family: 'Greycliff';
+    src: url('../../fonts/GreyCliff/Greycliff-CF-Regular.otf') format('opentype');
+    src: url('../../fonts/GreyCliff/Greycliff-CF-Bold.otf') format('opentype');
+    /* Wenn du mehrere Formate hast, kannst du sie auch angeben */
+    /* src: url('../assets/fonts/DeineSchriftart.woff2') format('woff2'),
+         url('../assets/fonts/DeineSchriftart.woff') format('woff'); */
+         /* font-weight: normal;
+         font-style: normal; */
+  }
 
+.DraggablePopup {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .card {
+    width: 100%;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cardContent {
+    font-family: 'Greycliff', sans-serif;
+    font-weight: normal;
+    padding: 20px;
+  }
+  
+  .cardContent h1 {
+    font-family: 'Greycliff', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  
+  .tag {
+    background-color: #f0e68c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .details, .time, .participants {
+    margin: 10px 0;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .time {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .participants {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .participants img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .qr-code {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .qr-code img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0e68c;
+    text-decoration: none;
+    color: #000000;
+    border-top: 1px solid #dddddd;
+    font-weight: bold;
+  }
+  
