@@ -20,6 +20,7 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
   }, [selectedActivity]);
 
   //Setzt die Position des Popups entsprechend welcher Button geklickt wurde
+  //Nochmal prüfen warum die Richtung der anchor Position nicht
   const getAnchorPosition = (type) => {
     if (type === "details") {
       return "top";

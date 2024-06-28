@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./Profile.module.css";
 import ProfileBubble from "../../components/ProfileBubble/ProfileBubble";
 import { Popup } from "react-map-gl";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import data from "../../data/activity.json";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 //Jenny: Darstellung der Profile als vertikaler Carousel
 
@@ -22,17 +23,10 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
 
   //Einstellungen für das Carousel -> man kann bisher nur horizontal swipen, muss noch eine Lösung gefunden werden
   const [imageIndex, setImageIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 1,
-    vertical: true,
-    verticalSwiping: true,
-    centerMode: true,
-    arrows: false,
-    beforeChange: (current, next) => setImageIndex(next),
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
   };
 
   return (
@@ -46,20 +40,30 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
         className={styles.PopupCustom}
       >
         <div className={styles.Slider}>
-          <Slider {...settings} className="carousel">
+          <Swiper
+            direction={"vertical"}
+            slidesPerView={3}
+            spaceBetween={0}
+            centeredSlides={true}
+            loop={true}
+            modules={[Pagination]}
+            initialSlide={1}
+            className="mySwiper"
+            onSlideChange={handleSlideChange}
+          >
             {profilesForActivity.map((profile, index) => (
               //Erstellt für jede Person, die an einer Aktivität teilgenommen hat eine Bubble
-              <div
-                className={index === imageIndex ? "slide activeSlide" : "slide"}
-                key={index}
-              >
-                <ProfileBubble
-                  profileID={profile.id}
-                  active={index === imageIndex ? true : false}
-                ></ProfileBubble>
-              </div>
+
+              <SwiperSlide key={profile.id}>
+                <div className={styles.ProfileBubbleContainer}>
+                  <ProfileBubble
+                    profileID={profile.id}
+                    isActive={index === activeIndex ? true : false}
+                  ></ProfileBubble>
+                </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
       </Popup>
     </div>

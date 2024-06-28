@@ -421,6 +421,46 @@
       "leave": "X days",
       "image": "../../assets/profiles/profile_3.png",
       "activities": [0, 1]
+    },
+    {
+      "id": 4,
+      "name": "name5",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1, 2]
+    },
+    {
+      "id": 5,
+      "name": "name6",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1, 2]
+    },
+    {
+      "id": 6,
+      "name": "name7",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1, 2]
+    },
+    {
+      "id": 7,
+      "name": "name8",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1, 2]
+    },
+    {
+      "id": 8,
+      "name": "name9",
+      "arrival": "X days ago",
+      "leave": "X days",
+      "image": "../../assets/profiles/profile_3.png",
+      "activities": [0, 1, 2]
     }
   ]
 }
