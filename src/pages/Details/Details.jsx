@@ -21,7 +21,6 @@ function Details({ selectedActivity, setSelectedActivity }) {
         event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
       });
     }
-
   }, []);
 
   return (

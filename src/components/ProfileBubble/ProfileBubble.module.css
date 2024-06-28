@@ -1,10 +1,7 @@
 .ProfileBubble {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  position: relative;
 }
 .ProfileBubble :global img {
-  position: relative;
   width: 150px;
   height: auto;
   border-radius: 50%;
@@ -14,16 +11,26 @@
 
 .ProfileBubble :global .text {
   visibility: hidden;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  color: rgba(255, 255, 255);
+  z-index: 2;
+  text-align: center;
+  width: 150px;
 }
 
 .ProfileBubble :global .activeText {
-  position: absolute;
-  color: rgba(255, 255, 255);
-  z-index: 1;
-  text-align: center;
-  margin-bottom: 15px;
-  width: 150px;
   visibility: visible;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  color: rgba(255, 255, 255);
+  z-index: 2;
+  text-align: center;
+  width: 150px;
 }
 
 .ProfileBubble :global .name {
