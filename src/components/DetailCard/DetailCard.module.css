@@ -51,6 +51,14 @@
   /* vertical-align: middle; */
 }
 
+.qrCode {
+  width: 50px;
+  height: 50px;
+  /* margin-right: 10px; */
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .tags {
   display: flex;
   gap: 10px;
@@ -131,7 +139,7 @@
 }
 
 .tags .tag {
-  background-color: #f0e68c; /* Matching the tag color */
+  background-color: #edd8b9; /* Matching the tag color */
   font-size: 14px; /* Larger font size */
 }
 
@@ -157,6 +165,6 @@
 
 .button {
   font-size: 18px; /* Larger font size for button */
-  background-color: #f0e68c; /* Matching button color */
+  background-color: #edd8b9; /* Matching button color */
   padding: 15px 0; /* More padding */
 }
