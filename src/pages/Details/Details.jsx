@@ -31,6 +31,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
         closeOnClick={false}
         onClose={() => setSelectedActivity(null)}
         anchor="top"
+        className={styles.PopupCustom}
       >
         <div ref={popupContentRef} className={`${styles.DraggablePopup}`}>
           <DetailCard />
