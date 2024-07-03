@@ -1,39 +1,103 @@
 @font-face {
   font-family: 'Greycliff';
+  src: url('../../fonts/GreyCliff/Greycliff-CF-Light.otf') format('opentype');
   src: url('../../fonts/GreyCliff/Greycliff-CF-Regular.otf') format('opentype');
   src: url('../../fonts/GreyCliff/Greycliff-CF-Bold.otf') format('opentype');
 }
 
-.DraggablePopup {
+.card {
+  width: 320px;
+  border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
   overflow: hidden;
-}
-
-.card {
-  width: 320px;;
-  border-radius: 15px;
-  background-color: #ffffff;
+  color: #282625;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 15px 15px 0 0;
 }
 
 .cardContent {
   font-family: 'Greycliff', sans-serif;
-  font-weight: normal;
-  padding: 20px;
+  font-weight: light;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .cardContent h1 {
   font-family: 'Greycliff', sans-serif;
+  font-weight: lighter;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #edd8b9;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.details {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.timeParticipantsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.leftSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center; /* Ensure text is centered */
+}
+
+.separator {
+  width: 1px;
+  background-color: #ddd;
+  height: 120px;
+  margin: 0 20px;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time,
+.participants {
+  font-size: 16px;
+  text-align: center; /* Ensure text is centered */
+}
+
+.time {
   font-weight: bold;
-  font-size: 24px;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
+}
+
+.participants {
+  display: flex;
+  flex-direction: column; /* Use column direction for centering vertically */
+  align-items: center; /* Ensure items are centered */
+  gap: 5px;
 }
 
 .locationIcon {
@@ -41,130 +105,15 @@
   height: 24px;
   margin-right: 10px;
   display: inline-block;
-  vertical-align: middle;
 }
+
 .participantsIcon {
-  width: 24px;
-  height: 24px;
-  margin-top: 10px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
-  /* vertical-align: middle; */
-}
-
-.qrCode {
-  width: 50px;
-  height: 50px;
-  /* margin-right: 10px; */
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.tags {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-weight: normal;
-}
-
-.tag {
-  background-color: #edd8b9;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-
-.details, .time, .participants {
-  margin: 10px 0;
-}
-
-.details {
-  font-size: 14px;
-  color: #666666;
-  display: flex;
-  align-items: center;
-}
-
-.time {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.participants {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.participants img {
-  width: 20px;
-  height: 20px;
-}
-
-.qrCode {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .qrCode img {
-  width: 100px;
-  height: 100px;
-}
-
-.button {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #edd8b9;
-  text-decoration: none;
-  color: #000000;
-  border-top: 1px solid #dddddd;
-  font-weight: bold;
-}
-
-.Content {
-  padding: 10px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Additional adjustments for matching the design */
-.cardContent h1 {
-  font-family: 'Greycliff', sans-serif;
-  font-weight: bold;
-  font-size: 28px; /* Larger font size */
-  margin: 10px 0; /* More margin */
-}
-
-.tags .tag {
-  background-color: #edd8b9; /* Matching the tag color */
-  font-size: 14px; /* Larger font size */
-}
-
-.details {
-  font-size: 16px; /* Larger font size for details */
-  color: #333; /* Darker color for better readability */
-}
-
-.time {
-  font-size: 20px; /* Larger font size for time */
-  font-weight: bold;
-}
-
-.participants img {
-  width: 24px; /* Larger icon */
-  height: 24px; /* Larger icon */
-}
-
-.qrCode img {
-  width: 120px; /* Larger QR code */
-  height: 120px; /* Larger QR code */
-}
-
-.button {
-  font-size: 18px; /* Larger font size for button */
-  background-color: #edd8b9; /* Matching button color */
-  padding: 15px 0; /* More padding */
+  width: 120px;
+  height: 120px;
 }
