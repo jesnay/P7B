@@ -53,7 +53,8 @@ function ActivityMap() {
                   setSelectedActivity(item);
                 }}
               >
-                <img src={item.markerImage} />
+                <img src={item.markerImage} /> 
+                {/* ^Das ist halt eigentlich ein SVG und brauch andere Daten wenn es als solches behandel werden soll */}
               </button>
             </Marker>
           );

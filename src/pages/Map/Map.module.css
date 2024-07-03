@@ -8,3 +8,8 @@
   background: none;
   border: none;
 }
+
+.Marker svg {
+  width: 24px;
+  height: 24px;
+}
