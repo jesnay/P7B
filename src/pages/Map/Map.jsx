@@ -12,8 +12,8 @@ function ActivityMap() {
 
   //Definiert den Startpunkt der Map
   const [viewport, setViewport] = useState({
-    latitude: 7.9411625,
-    longitude: 98.4223534,
+    latitude:  7.929,
+    longitude: 98.35,
     width: "100vw",
     height: "100vh",
     zoom: 13,

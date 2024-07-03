@@ -58,7 +58,7 @@ const DetailCard = () => {
             <div className={styles.qrCode}>
             <div className={styles.cardContent}>Scan to book!</div>
               <img src={Activity.details[0].bookingQR} alt="QR Code" />
-              <div className={styles.cardContent}>Let's book!</div>
+              {/* <div className={styles.cardContent}>Let's book!</div> */}
             </div>
           </div>
         </div>
