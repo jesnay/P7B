@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./GalleryImage.module.css";
 import testImage from "../../data/activity.json";
 
