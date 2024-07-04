@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./OptionButtons.module.css";
 import { Popup } from "react-map-gl";
 import Profiles from "../../pages/Profile/Profile";
@@ -11,6 +11,7 @@ import Gallery from "../../pages/Gallery/Gallery";
 function OptionButtons({ selectedActivity, setSelectedActivity }) {
   const [activeComponent, setActiveComponent] = useState(null);
   const [type, setType] = useState(["details", "profiles", "gallery"]);
+
   const [selectedOption, setSelectedOption] = useState(null);
 
   //Resettet alles auf null wenn eine neue Aktivität angeklickt wurde
@@ -31,6 +32,16 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
     }
   };
 
+  const showButtonText = (item) => {
+    if (item === "details") {
+      return "DETAILS";
+    } else if (item === "profiles") {
+      return "EXPERIENCED";
+    } else if (item === "gallery") {
+      return "GALLERY";
+    }
+  };
+
   //Öffnet abhängig davon welcher Button geklickt wurde das zugehörige Popup
   const handleButtonClick = (type) => {
     if (type === "profiles") {
@@ -40,6 +51,7 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
           setSelectedActivity={setSelectedActivity}
         />
       );
+
       setSelectedOption(type);
     } else if (type === "details") {
       setActiveComponent(
@@ -61,7 +73,7 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
   };
 
   return (
-    <div>
+    <div className={styles.OptionButtons}>
       {type.map((item) => {
         return (
           <div>
@@ -72,15 +84,19 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
                 closeOnClick={false}
                 onClose={() => setSelectedActivity(null)}
                 anchor={getAnchorPosition(item)}
+                style={{ maxWidth: "600px" }}
+                className={styles.PopupCustom}
               >
+                {" "}
                 <button
                   onClick={(e) => {
                     e.preventDefault();
                     console.log(item + " clicked");
                     handleButtonClick(item);
                   }}
+                  className="optionbtn"
                 >
-                  {item}
+                  {showButtonText(item)}
                 </button>
               </Popup>
             )}
@@ -93,3 +109,5 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
 }
 
 export default OptionButtons;
+
+//className={type === true ? "text activeText" : "text"}

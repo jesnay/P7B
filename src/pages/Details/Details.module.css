@@ -1,4 +1,4 @@
-.Details {
+/*.Details {
   position: relative;
   z-index: 1;
   background-color: aliceblue;
@@ -6,21 +6,20 @@
   height: fit-content;
 }
 
-/* Details.module.css */
+
 .Container {
   position: relative;
 }
 
 .HeaderContainer {
-  transition: transform 0.5s ease-in-out; /* Smooth rotation animation */
-  transform-origin: center center; /* Rotate around the center */
+  transform-origin: center center; 
 }
 
 .Content {
   padding: 10px;
-  background-color: white; /* Adjust as necessary */
-  border: 1px solid #ccc; /* Adjust as necessary */
-  border-radius: 5px; /* Adjust as necessary */
+  background-color: white; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .Container {
@@ -29,17 +28,15 @@
 }
 
 .rotate {
-  transform: rotate(45deg); /* Example rotation */
+  transform: rotate(45deg); 
 }
 
 .tapTarget {
   transition: transform 0.3s ease, background-color 0.3s ease;
-  /* Include other styles for your tap target here */
-}
+ 
+}*/
 
-/*.Details {
-  /* Add your styles for the Details component here */
-  .PopupCustom {
+.PopupCustom {
   background: transparent;
   box-shadow: none;
 }
@@ -56,4 +53,36 @@
 
 .PopupCustom :global .mapboxgl-popup-close-button {
   display: none !important;
+}
+
+.Cards {
+  width: fit-content;
+  transform-origin: center;
+}
+
+.Cards :global .swiper {
+  width: 360px;
+  height: fit-content;
+}
+
+.Cards :global .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Cards :global .swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.Cards :global .swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.Cards :global .swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
 }

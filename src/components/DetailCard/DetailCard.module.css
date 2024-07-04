@@ -1,23 +1,7 @@
-@font-face {
-  font-family: 'Greycliff';
-  src: url('../../fonts/GreyCliff/Greycliff-CF-Light.otf') format('opentype');
-font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Greycliff';
-  src: url('../../fonts/GreyCliff/Greycliff-CF-Regular.otf') format('opentype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Greycliff';
-  src: url('../../fonts/GreyCliff/Greycliff-CF-Bold.otf') format('opentype');
-  font-weight: bold;
-}
 .card {
   width: 360px;
   border-radius: 15px;
-  background-color: #FCF8F3;
+  background-color: #fcf8f3;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   color: #282625;
@@ -29,13 +13,13 @@ font-weight: 800;
 }
 
 .cardContent {
-  font-family: 'Greycliff', sans-serif;
+  font-family: "Greycliff", sans-serif;
   padding: 10px;
   font-size: 16px;
 }
 
 .cardContent h1 {
-  font-family: 'Greycliff', sans-serif;
+  font-family: "Greycliff", sans-serif;
   font-weight: bold;
   font-size: 32px;
   margin: 10px;
@@ -82,7 +66,7 @@ font-weight: 800;
   width: 1px;
   background-color: #ddd;
   height: 160px;
-  margin:  20px;
+  margin: 20px;
 }
 
 .rightSide {
@@ -92,7 +76,6 @@ font-weight: 800;
   align-items: center;
   margin-right: 10px;
 }
-
 
 .participants {
   font-size: 20px;

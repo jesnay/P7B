@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from './DetailCard.module.css';
-import Activity from '../../data/activity.json';
+import React from "react";
+import styles from "./DetailCard.module.css";
+import Activity from "../../data/activity.json";
 
 const DetailCard = () => {
   return (
@@ -32,8 +32,9 @@ const DetailCard = () => {
         <div className={styles.timeParticipantsWrapper}>
           <div className={styles.leftSide}>
             <div className={styles.time}>
-              {Activity.details[0].date}<br />
-              {Activity.details[0].startTime} -<br/>
+              {Activity.details[0].date}
+              <br />
+              {Activity.details[0].startTime} -<br />
               {Activity.details[0].endTime}
             </div>
             <div className={styles.participants}>
@@ -56,7 +57,7 @@ const DetailCard = () => {
           <div className={styles.separator}></div>
           <div className={styles.rightSide}>
             <div className={styles.qrCode}>
-            <div className={styles.cardContent}>Scan to book!</div>
+              <div className={styles.cardContent}>Scan to book!</div>
               <img src={Activity.details[0].bookingQR} alt="QR Code" />
               {/* <div className={styles.cardContent}>Let's book!</div> */}
             </div>

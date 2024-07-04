@@ -1,0 +1,30 @@
+.PopupCustom :global .mapboxgl-popup-content {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  /*width: fit-content;*/
+}
+
+.PopupCustom :global .mapboxgl-popup-tip {
+  display: none;
+}
+
+.PopupCustom :global .mapboxgl-popup-close-button {
+  display: none !important;
+}
+
+.PopupCustom :global .optionbtn {
+  font-family: "Greycliff", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  padding: 12px 32px;
+  margin: 8px;
+  border-radius: 8px;
+  background-color: #fcf8f4;
+}

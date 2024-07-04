@@ -1,12 +1,14 @@
 .PopupCustom {
   background: transparent;
   box-shadow: none;
+  transform-origin: center;
 }
 /*hier das stylesheet hier rein bringen*/
 .PopupCustom :global .mapboxgl-popup-content {
   background: transparent;
   box-shadow: none;
   border: none;
+  padding-right: 40px;
 }
 
 .PopupCustom :global .mapboxgl-popup-tip {
@@ -17,9 +19,10 @@
   display: none !important;
 }
 
-.Slider :global .swiper {
+.Slider :global .mySwiper {
   width: 220px;
   height: 480px;
+  transform-origin: center;
 }
 
 .Slider :global .swiper-slide {

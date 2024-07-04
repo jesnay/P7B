@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import interact from "interactjs";
 import styles from "./Profile.module.css";
 import ProfileBubble from "../../components/ProfileBubble/ProfileBubble";
 import { Popup } from "react-map-gl";
@@ -29,6 +30,20 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
     setActiveIndex(swiper.realIndex);
   };
 
+  const popupContentRef = useRef(null);
+
+  useEffect(() => {
+    if (popupContentRef.current) {
+      let isRotated = false;
+
+      interact(popupContentRef.current).on("hold", function (event) {
+        isRotated = !isRotated;
+        const rotationDegree = isRotated ? 180 : 0;
+        event.currentTarget.style.transform = `rotate(${rotationDegree}deg)`;
+      });
+    }
+  }, []);
+
   return (
     <div className={styles.Profiles}>
       <Popup
@@ -38,8 +53,9 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
         onClose={() => setSelectedActivity(null)}
         anchor="bottom-right"
         className={styles.PopupCustom}
+        style={{ maxWidth: "600px" }}
       >
-        <div className={styles.Slider}>
+        <div ref={popupContentRef} className={styles.Slider}>
           <Swiper
             direction={"vertical"}
             slidesPerView={3}

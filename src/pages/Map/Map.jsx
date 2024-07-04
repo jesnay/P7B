@@ -12,8 +12,8 @@ function ActivityMap() {
 
   //Definiert den Startpunkt der Map
   const [viewport, setViewport] = useState({
-    latitude:  7.929,
-    longitude: 98.35,
+    latitude: 7.82984,
+    longitude: 98.403779,
     width: "100vw",
     height: "100vh",
     zoom: 13,
@@ -30,13 +30,20 @@ function ActivityMap() {
     );
   }
 
+  const handleMapClick = (event) => {
+    setSelectedActivity(null);
+  };
+
   return (
     <div className={styles.Map}>
       <ReactMapGL
         {...viewport}
         mapboxAccessToken={token}
         onMove={(evt) => setViewport(evt.viewState)}
+        onClick={handleMapClick}
         mapStyle="mapbox://styles/stjesnay/clxg1yzc2007301pc4ard48tg"
+        dragRotate={true}
+        touchRotate={true}
       >
         {Activity.details.map((item) => {
           //Zeigt alle Aktivitäten aus der Json auf der Map an
@@ -51,10 +58,10 @@ function ActivityMap() {
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedActivity(item);
+                  e.stopPropagation();
                 }}
               >
-                <img src={item.markerImage} /> 
-                {/* ^Das ist halt eigentlich ein SVG und brauch andere Daten wenn es als solches behandel werden soll */}
+                <img src={item.markerImage} />
               </button>
             </Marker>
           );
