@@ -5,7 +5,7 @@
       "name": "Water Rafting",
       "longitude": 98.3583,
       "latitude": 7.95,
-      "markerImage": "/assets/markers/Nature.svg", 
+      "markerImage": "/assets/markers/Nature.svg",
       "activityImage": "/assets/activities/WaterRafting.jpg",
       "startTime": "10:00 AM",
       "endTime": "2:00 PM",
@@ -378,15 +378,47 @@
   "gallery": [
     {
       "activity": 0,
-      "images": ["/assets/gallery/00/00_01.png"]
+      "images": ["/assets/gallery/00.png"]
     },
     {
       "activity": 1,
-      "images": ["/assets/gallery/00/00_01.png"]
+      "images": ["/assets/gallery/01.png"]
     },
     {
       "activity": 2,
-      "images": ["/assets/gallery/00/00_01.png"]
+      "images": ["/assets/gallery/02.png"]
+    },
+    {
+      "activity": 3,
+      "images": ["/assets/gallery/03.png"]
+    },
+    {
+      "activity": 4,
+      "images": ["/assets/gallery/04.png"]
+    },
+    {
+      "activity": 5,
+      "images": ["/assets/gallery/05.png"]
+    },
+    {
+      "activity": 6,
+      "images": ["/assets/gallery/06.png"]
+    },
+    {
+      "activity": 7,
+      "images": ["/assets/gallery/07.png"]
+    },
+    {
+      "activity": 8,
+      "images": ["/assets/gallery/08.png"]
+    },
+    {
+      "activity": 9,
+      "images": ["/assets/gallery/09.png"]
+    },
+    {
+      "activity": 10,
+      "images": ["/assets/gallery/10.png"]
     }
   ],
   "profiles": [

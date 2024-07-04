@@ -34,7 +34,8 @@ function Gallery({ selectedActivity, setSelectedActivity }) {
       >
         <div ref={popupContentRef} className={styles.Images}>
           {" "}
-          <GalleryImage />
+          {console.log("selected Activity: " + selectedActivity.id)}
+          <GalleryImage activityID={selectedActivity.id} />
         </div>
       </Popup>
     </div>
