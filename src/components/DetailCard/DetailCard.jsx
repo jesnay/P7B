@@ -57,7 +57,7 @@ const DetailCard = () => {
           <div className={styles.separator}></div>
           <div className={styles.rightSide}>
             <div className={styles.qrCode}>
-              <div className={styles.cardContent}>Scan to book!</div>
+              <p>Scan to book!</p>
               <img src={Activity.details[0].bookingQR} alt="QR Code" />
               {/* <div className={styles.cardContent}>Let's book!</div> */}
             </div>
