@@ -15,7 +15,7 @@ import { EffectCards } from "swiper/modules";
 //Jenny: Popup anhängig der geklickten Aktivität anzeigen
 import DetailCard from "../../components/DetailCard/DetailCard"; // Import DetailCard
 import InformationCard from "../../components/DetailCard/InformationCard"; // Import InformationCard
-// import ChecklistCard from "../../components/DetailCard/ChecklistCard";
+import ChecklistCard from "../../components/DetailCard/ChecklistCard"; // Import ChecklistCard 
 
 
 function Details({ selectedActivity, setSelectedActivity }) {
@@ -62,8 +62,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
               <InformationCard />
             </SwiperSlide>
             <SwiperSlide>
-            
-              <SwiperSlide />
+              <ChecklistCard />
             </SwiperSlide>
           </Swiper>
         </div>

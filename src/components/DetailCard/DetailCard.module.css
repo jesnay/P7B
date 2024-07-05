@@ -17,8 +17,6 @@
   font-family: "Greycliff", sans-serif;
   padding: 24px;
   font-size: 18px;
-
-  /* margin:10px; */
 }
 .cardContent span {
   font-family: "Greycliff", sans-serif;
@@ -45,6 +43,22 @@
   font-size: 24px;
 }
 
+.checkList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checkListItem {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.checkListItem input {
+  margin-right: 10px;
+}
+
 .tags {
   display: flex;
   gap: 10px;
@@ -65,7 +79,6 @@
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin: 10px 0;
 }
 
 .timeParticipantsWrapper {
@@ -124,11 +137,10 @@
 }
 
 .locationIcon {
-  width: 36px;
-  height: 36px;
-  margin-right: 10px;
-  margin-left: 10px;
-  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-right: 14px;
+ 
 }
 
 .participantsIcon {
@@ -143,8 +155,6 @@
   display: inline-block;
   text-align: center;
 }
-
-/* Styles for Guide Info*/
 
 .guide {
   display: flex;
@@ -164,3 +174,13 @@
   flex-direction: column;
   font-weight: 500;
 }
+
+/* .scanSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scanSection strong {
+  flex: 1;
+} */
