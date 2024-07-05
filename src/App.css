@@ -1,10 +1,15 @@
-/*@font-face {
+@font-face {
+  font-family: "Greycliff";
+  src: url("./fonts/GreyCliff/Greycliff-CF-Light.otf") format("opentype");
+  font-weight: lighter;
+}
+@font-face {
     font-family: "Greycliff";
     src: url("./fonts/GreyCliff/Greycliff-CF-Regular.otf") format("opentype");
     font-weight: 500;
   }
-  @font-face {
+@font-face {
     font-family: "Greycliff";
     src: url("./fonts/GreyCliff/Greycliff-CF-Bold.otf") format("opentype");
     font-weight: bold;
-  }*/
+  }

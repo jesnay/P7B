@@ -57,7 +57,7 @@ const DetailCard = () => {
           <div className={styles.separator}></div>
           <div className={styles.rightSide}>
             <div className={styles.qrCode}>
-              <div className={styles.cardContent}>Scan to book!</div>
+              <p>Scan to book!</p>
               <img src={Activity.details[0].bookingQR} alt="QR Code" />
               {/* <div className={styles.cardContent}>Let's book!</div> */}
             </div>
@@ -69,26 +69,3 @@ const DetailCard = () => {
 };
 
 export default DetailCard;
-
-// const InformationCard = ({ onClick }) => {
-//   return (
-//     <div className={styles.card} onClick={onClick}>
-//       <div className={styles.informationCard}>
-//         <p>{Activity.details[0].name}</p>
-//         <h1>Information</h1>
-//         <p>
-//           {Activity.details[0].description}</p>
-        
-//         <div className={styles.guide}>
-//           <img src={Activity.details[0].guideImage} alt="Guide" />
-//           <div className={styles['guide-info']}>
-//             <strong>Guide</strong><br />
-//             {Activity.details[0].guideName} ({Activity.details[0].guideAge})
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default InformationCard;

@@ -18,7 +18,7 @@
       "guideName": "Jeremias Prase",
       "guideAge": "27",
       "checkList": ["Swimsuit", "Water shoes", "Towel", "Sunscreen"],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
         "highIntensity": true,
         "lowIntensity": false,
