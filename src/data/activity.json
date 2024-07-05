@@ -14,6 +14,7 @@
       "participants": "8-16",
       "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Experience the thrill of navigating the rapids of the SongPhraek River. Enjoy the beautiful natural surroundings and the adrenaline rush of white-water rafting. Encounter class 2 rapids, sometimes up to class 4 in the rainy season. Change into gear and kick off your exciting adventure. Refuel with a tasty buffet meal.",
+      "guideImage": "/assets/profiles/guides/WaterRaftingGuide.jpg",
       "guideName": "Jeremias Prase",
       "guideAge": "27",
       "checkList": ["Swimsuit", "Water shoes", "Towel", "Sunscreen"],
