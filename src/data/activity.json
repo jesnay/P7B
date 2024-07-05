@@ -14,7 +14,7 @@
       "participants": "8-16",
       "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Experience the thrill of navigating the rapids of the SongPhraek River. Enjoy the beautiful natural surroundings and the adrenaline rush of white-water rafting. Encounter class 2 rapids, sometimes up to class 4 in the rainy season. Change into gear and kick off your exciting adventure. Refuel with a tasty buffet meal.",
-      "guideImage": "/assets/profiles/guides/WaterRaftingGuide.jpg",
+      "guideImage": "/assets/profiles/guides/WaterRaftingGuide.png",
       "guideName": "Jeremias Prase",
       "guideAge": "27",
       "checkList": ["Swimsuit", "Water shoes", "Towel", "Sunscreen"],
@@ -45,6 +45,7 @@
       "participants": "10-15",
       "bookingQR": "",
       "description": "Explore the underwater world of the Koh Papao Yai Islands, known for their crystal-clear waters and colorful coral reefs. Swim with exotic fish and discover the diverse marine life.",
+      "guideImage": "/assets/profiles/guides/SnorklingGuide.png",
       "guideName": "Sara Lee",
       "guideAge": "28",
       "checkList": [
@@ -80,6 +81,7 @@
       "participants": "3-10",
       "bookingQR": "",
       "description": "Start your day with a relaxing yoga session on the beach, listen to the gentle sound of the waves, and feel the soft sand under your feet. Perfect for harmonizing body and mind.",
+      "guideImage": "/assets/profiles/guides/YogaGuide.png",
       "guideName": "Ananda Sharma",
       "guideAge": "25",
       "checkList": [
@@ -115,6 +117,7 @@
       "participants": "6-8",
       "bookingQR": "",
       "description": "Test your limits and climb the impressive limestone cliffs. Enjoy breathtaking views and the sense of accomplishment when you reach the top.",
+      "guideImage": "/assets/profiles/guides/RockClimbingGuide.png",
       "guideName": "Tom Wilson",
       "guideAge": "30",
       "checkList": [
@@ -150,6 +153,7 @@
       "participants": "4-12",
       "bookingQR": "",
       "description": "Immerse yourself in the flavors and spices of Thai cuisine. Learn to prepare traditional dishes and enjoy your culinary creations afterward.",
+      "guideImage": "/assets/profiles/guides/CookingGuide.png",
       "guideName": "Ploy Sukhon",
       "guideAge": "35",
       "checkList": ["Notebook", "Pen", "Camera"],
@@ -179,6 +183,7 @@
       "participants": "10-15",
       "bookingQR": "",
       "description": "Explore the lush forests of Khao Phra Thaeo National Park. Discover exotic plants and animals, and enjoy the fresh air and natural beauty.",
+      "guideImage": "/assets/profiles/guides/JungleGuide.png",
       "guideName": "Somchai Rattanapong",
       "guideAge": "32",
       "checkList": [
@@ -214,6 +219,7 @@
       "participants": "5-10",
       "bookingQR": "",
       "description": "Visit the impressive temples of Phuket and immerse yourself in local culture and history. Admire the architecture and learn about the spiritual significance of these sites.",
+      "guideImage": "/assets/profiles/guides/TempleGuide.png",
       "guideName": "Pravit Charoen",
       "guideAge": "28",
       "checkList": [
@@ -249,6 +255,7 @@
       "participants": "8-12",
       "bookingQR": "",
       "description": "Paddle through the dense mangrove forests and discover the rich wildlife of the area. Enjoy the tranquility and natural beauty of Phang Nga Bay.",
+      "guideImage": "/assets/profiles/guides/KajakGuide.png",
       "guideName": "Narin Daeng",
       "guideAge": "29",
       "checkList": [
@@ -284,8 +291,9 @@
       "participants": "4-10",
       "bookingQR": "",
       "description": "Stroll through the colorful arts and crafts market and discover handmade treasures. Find unique souvenirs and support local artisans or try some typical thai snacks and meals.",
+      "guideImage": "/assets/profiles/guides/MarketGuide.png",
       "guideName": "Aree Wang",
-      "guideAge": "40",
+      "guideAge": "26",
       "checkList": [
         "Comfortable shoes",
         "Shopping bag",
@@ -319,6 +327,7 @@
       "participants": "6-10",
       "bookingQR": "",
       "description": "Ride on challenging trails around the Kathu Waterfall and experience the thrill of descending steep slopes. Enjoy the breathtaking scenery and fresh air.",
+      "guideImage": "/assets/profiles/guides/MountainbikingGuide.png",
       "guideName": "James Kaito",
       "guideAge": "26",
       "checkList": [
@@ -354,6 +363,7 @@
       "participants": "8-12",
       "bookingQR": "",
       "description": "Experience an unforgettable sunset aboard a cozy boat. Enjoy the stunning views and the serene atmosphere on the water.",
+      "guideImage": "/assets/profiles/guides/SunsetGuide.png",
       "guideName": "Kady Nopparat",
       "guideAge": "28",
       "checkList": [
