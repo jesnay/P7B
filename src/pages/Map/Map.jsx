@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactMapGL from "react-map-gl";
 import Map, { Marker, Popup } from "react-map-gl";
 import styles from "./Map.module.css";
 import Activity from "../../data/activity.json";
 import OptionButtons from "../../components/OptionButtons/OptionButtons";
 
-//Jenny: Integration der Mapbox API, Generierung der Aktivitäten-Markers
-
+//Jenny: Integration der Mapbox API; Generierung der Aktivitäten-Markers; Popup abhängig der geklickten Aktivität anzeigen
 function ActivityMap() {
   const [selectedActivity, setSelectedActivity] = useState(null);
+  const token = process.env.REACT_APP_MAPBOX_TOKEN;
+  const mapRef = useRef();
 
   //Definiert den Startpunkt der Map
   const [viewport, setViewport] = useState({
@@ -16,10 +17,9 @@ function ActivityMap() {
     longitude: 98.403779,
     width: "100vw",
     height: "100vh",
+    pitch: 0,
     zoom: 13,
   });
-
-  const token = process.env.REACT_APP_MAPBOX_TOKEN;
 
   //Checkt ob der API Token vorhanden ist
   if (!token) {
@@ -30,20 +30,39 @@ function ActivityMap() {
     );
   }
 
+  //Setzt die Aktivität wieder zurück, wenn irgendwo auf die Map geklickt wird.
   const handleMapClick = (event) => {
     setSelectedActivity(null);
+  };
+
+  //Wird ein Marker angeklickt, bewegt sich die Map so, dass der Marker zentriert ist
+  const centerMap = (item) => {
+    if (mapRef.current) {
+      mapRef.current.flyTo({
+        center: [item.longitude, item.latitude],
+        zoom: 13,
+        speed: 1.2,
+        curve: 1.42,
+        easing: (t) => t,
+      });
+    }
   };
 
   return (
     <div className={styles.Map}>
       <ReactMapGL
         {...viewport}
+        ref={mapRef}
         mapboxAccessToken={token}
         onMove={(evt) => setViewport(evt.viewState)}
+        onViewportChange={(nextViewport) => setViewport(nextViewport)}
         onClick={handleMapClick}
         mapStyle="mapbox://styles/stjesnay/clxg1yzc2007301pc4ard48tg"
         dragRotate={true}
         touchRotate={true}
+        touchZoomRotate={true}
+        touchPitch={true}
+        /*minZoom={10}*/
       >
         {Activity.details.map((item) => {
           //Zeigt alle Aktivitäten aus der Json auf der Map an
@@ -59,6 +78,7 @@ function ActivityMap() {
                   e.preventDefault();
                   setSelectedActivity(item);
                   e.stopPropagation();
+                  centerMap(item);
                 }}
               >
                 <img src={item.markerImage} />
@@ -68,7 +88,7 @@ function ActivityMap() {
         })}
 
         {selectedActivity ? (
-          //Wenn eine Aktivität angeklickt wurde werden 3 Optionen (details, profiles und gallery) zur auswahl angezeigt
+          //Wenn eine Aktivität angeklickt wurde werden 3 Optionen (details, profiles und gallery) zur Auswahl angezeigt
           <div className={styles.Options}>
             <OptionButtons
               selectedActivity={selectedActivity}

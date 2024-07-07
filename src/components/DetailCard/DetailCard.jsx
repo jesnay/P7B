@@ -2,16 +2,21 @@ import React from "react";
 import styles from "./DetailCard.module.css";
 import Activity from "../../data/activity.json";
 
-const DetailCard = () => {
+//Yara: Aufbau der Detail Card
+
+const DetailCard = ({ activityID }) => {
   return (
     <div className={styles.card}>
-      <img src={Activity.details[0].activityImage} alt="Water Rafting" />
       <div className={styles.cardContent}>
-        <h1>{Activity.details[0].name}</h1>
+        <img
+          src={Activity.details[activityID].activityImage}
+          alt="Header image"
+        />
+        <h1>{Activity.details[activityID].name}</h1>
         <div className={styles.tags}>
-          <div className={styles.tag}>Jungle</div>
-          <div className={styles.tag}>Water</div>
-          <div className={styles.tag}>High-intensity</div>
+          {Object.entries(Activity.details[activityID].tags).map(
+            ([tag, value]) => value && <div className={styles.tag}>{tag}</div>
+          )}
         </div>
         <div className={styles.details}>
           <svg
@@ -27,15 +32,15 @@ const DetailCard = () => {
               fill="#282625"
             />
           </svg>
-          <span>{Activity.details[0].address}</span>
+          <span>{Activity.details[activityID].address}</span>
         </div>
         <div className={styles.timeParticipantsWrapper}>
           <div className={styles.leftSide}>
             <div className={styles.time}>
-              {Activity.details[0].date}
+              {Activity.details[activityID].date}
               <br />
-              {Activity.details[0].startTime} -<br />
-              {Activity.details[0].endTime}
+              {Activity.details[activityID].startTime} -<br />
+              {Activity.details[activityID].endTime}
             </div>
             <div className={styles.participants}>
               <svg
@@ -51,15 +56,14 @@ const DetailCard = () => {
                   fill="black"
                 />
               </svg>
-              {Activity.details[0].participants}
+              {Activity.details[activityID].participants}
             </div>
           </div>
           <div className={styles.separator}></div>
           <div className={styles.rightSide}>
             <div className={styles.qrCode}>
               <p>Scan to book!</p>
-              <img src={Activity.details[0].bookingQR} alt="QR Code" />
-              {/* <div className={styles.cardContent}>Let's book!</div> */}
+              <img src={Activity.details[activityID].bookingQR} alt="QR Code" />
             </div>
           </div>
         </div>

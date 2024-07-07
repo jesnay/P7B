@@ -20,20 +20,20 @@
       "checkList": ["Swimsuit", "Water shoes", "Towel", "Sunscreen"],
       "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
-        "water": true,
-        "fitness": true,
-        "relaxation": false,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": true,
+        "Low": false,
+        "Water": true,
+        "Fitness": false,
+        "Relaxation": false,
+        "Cuisine": false,
+        "Nature": true,
+        "Culture": false
       }
     },
 
     {
       "id": 1,
-      "name": "Snorkeling in the Koh Papao Yai Islands",
+      "name": "Snorkeling",
       "longitude": 98.403779,
       "latitude": 7.82984,
       "markerImage": "/assets/markers/Water.svg",
@@ -43,7 +43,7 @@
       "date": "15 July 2024",
       "address": "88/88 Mhu 7 Wichit, Mueang Phuket District, Phuket 83000, Thailand",
       "participants": "10-15",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Explore the underwater world of the Koh Papao Yai Islands, known for their crystal-clear waters and colorful coral reefs. Swim with exotic fish and discover the diverse marine life.",
       "guideImage": "/assets/profiles/guides/SnorklingGuide.png",
       "guideName": "Sara Lee",
@@ -55,16 +55,16 @@
         "Sunscreen",
         "Water bottle"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
-        "water": true,
-        "fitness": false,
-        "relaxation": false,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": false,
+        "Low": true,
+        "Water": true,
+        "Fitness": false,
+        "Relaxation": false,
+        "Cuisine": false,
+        "Nature": true,
+        "Culture": false
       }
     },
     {
@@ -79,7 +79,7 @@
       "date": "20 July 2024",
       "address": "Kathu, Kathu District, Phuket 83150, Thailand",
       "participants": "3-10",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Start your day with a relaxing yoga session on the beach, listen to the gentle sound of the waves, and feel the soft sand under your feet. Perfect for harmonizing body and mind.",
       "guideImage": "/assets/profiles/guides/YogaGuide.png",
       "guideName": "Ananda Sharma",
@@ -91,21 +91,21 @@
         "Towel",
         "Sunglasses"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": false,
-        "lowIntensity": true,
-        "water": false,
-        "fitness": true,
-        "relaxation": true,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": false,
+        "Low": true,
+        "Water": false,
+        "Fitness": true,
+        "Relaxation": true,
+        "Cuisine": false,
+        "Nature": false,
+        "Culture": false
       }
     },
     {
       "id": 3,
-      "name": "Rock Climbing on Limestone Cliffs",
+      "name": "Rock Climbing",
       "longitude": 98.38875752682702,
       "latitude": 7.823749029784801,
       "markerImage": "/assets/markers/Fitness.svg",
@@ -115,7 +115,7 @@
       "date": "22 July 2024",
       "address": "Wichit, Mueang Phuket District, Phuket 83000, Thailand",
       "participants": "6-8",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Test your limits and climb the impressive limestone cliffs. Enjoy breathtaking views and the sense of accomplishment when you reach the top.",
       "guideImage": "/assets/profiles/guides/RockClimbingGuide.png",
       "guideName": "Tom Wilson",
@@ -127,10 +127,10 @@
         "Chalk for hands",
         "Water bottle"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
+        "high-intensity": true,
+        "low-intensity": false,
         "water": false,
         "fitness": true,
         "relaxation": false,
@@ -149,24 +149,24 @@
       "startTime": "4:30 PM",
       "endTime": "7:00 PM",
       "date": "25 July 2024",
-      "address": "Phuket Thai Cooking Academy, 81/23 Soi Chang, Phuket Old Town, Mueang Phuket District, Phuket 83000, Thailand",
+      "address": "Phuket Thai Cooking Academy, 81/23 Soi Chang, Phuket Old Town",
       "participants": "4-12",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Immerse yourself in the flavors and spices of Thai cuisine. Learn to prepare traditional dishes and enjoy your culinary creations afterward.",
       "guideImage": "/assets/profiles/guides/CookingGuide.png",
       "guideName": "Ploy Sukhon",
       "guideAge": "35",
       "checkList": ["Notebook", "Pen", "Camera"],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": false,
-        "lowIntensity": true,
-        "water": false,
-        "fitness": false,
-        "relaxation": true,
-        "cuisine": true,
-        "nature": false,
-        "culture": true
+        "High": false,
+        "Low": true,
+        "Water": false,
+        "Fitness": false,
+        "Relaxation": false,
+        "Cuisine": true,
+        "Nature": false,
+        "Culture": true
       }
     },
     {
@@ -179,9 +179,9 @@
       "startTime": "8:00 AM",
       "endTime": "2:00 PM",
       "date": "28 July 2024",
-      "address": "Khao Phra Thaeo National Park, 252 Moo 5, Thep Krasattri, Thalang District, Phuket 83110, Thailand",
+      "address": "Khao Phra Thaeo National Park, 252 Moo 5, Thep Krasattri, Thalang District",
       "participants": "10-15",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Explore the lush forests of Khao Phra Thaeo National Park. Discover exotic plants and animals, and enjoy the fresh air and natural beauty.",
       "guideImage": "/assets/profiles/guides/JungleGuide.png",
       "guideName": "Somchai Rattanapong",
@@ -193,16 +193,16 @@
         "Water bottle",
         "Snacks"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
-        "water": false,
-        "fitness": true,
-        "relaxation": false,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": true,
+        "Low": false,
+        "Water": false,
+        "Fitness": true,
+        "Relaxation": false,
+        "Cuisine": false,
+        "Nature": true,
+        "Culture": false
       }
     },
     {
@@ -215,9 +215,9 @@
       "startTime": "9:00 AM",
       "endTime": "3:00 PM",
       "date": "30 July 2024",
-      "address": "Wat Chalong, Chaofa Road (West), Chalong, Mueang Phuket District, Phuket 83000, Thailand",
+      "address": "Wat Chalong, Chaofa Road (West), Chalong, Mueang Phuket District",
       "participants": "5-10",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Visit the impressive temples of Phuket and immerse yourself in local culture and history. Admire the architecture and learn about the spiritual significance of these sites.",
       "guideImage": "/assets/profiles/guides/TempleGuide.png",
       "guideName": "Pravit Charoen",
@@ -229,21 +229,21 @@
         "Hat",
         "Water bottle"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": false,
-        "lowIntensity": true,
-        "water": false,
-        "fitness": false,
-        "relaxation": true,
-        "cuisine": false,
-        "nature": false,
-        "culture": true
+        "High": false,
+        "Low": true,
+        "Water": false,
+        "Fitness": false,
+        "Relaxation": true,
+        "Cuisine": false,
+        "Nature": false,
+        "Culture": true
       }
     },
     {
       "id": 7,
-      "name": "Kayaking in the Mangrove Forests",
+      "name": "Kayaking",
       "longitude": 98.43663,
       "latitude": 8.060093,
       "markerImage": "/assets/markers/Water.svg",
@@ -253,7 +253,7 @@
       "date": "2 August 2024",
       "address": "Ao Por Pier, Andaman Sea, Pa Klok, Thalang District, Phuket 83110, Thailand",
       "participants": "8-12",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Paddle through the dense mangrove forests and discover the rich wildlife of the area. Enjoy the tranquility and natural beauty of Phang Nga Bay.",
       "guideImage": "/assets/profiles/guides/KajakGuide.png",
       "guideName": "Narin Daeng",
@@ -265,21 +265,21 @@
         "Hat",
         "Water bottle"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
-        "water": true,
-        "fitness": true,
-        "relaxation": false,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": false,
+        "Low": true,
+        "Water": true,
+        "Fitness": false,
+        "Relaxation": false,
+        "Cuisine": false,
+        "Nature": true,
+        "Culture": false
       }
     },
     {
       "id": 8,
-      "name": "Arts, Crafts & Food Market",
+      "name": "Art & Food Market",
       "longitude": 98.36669114178373,
       "latitude": 7.880445177771961,
       "markerImage": "/assets/markers/Cuisine.svg",
@@ -289,7 +289,7 @@
       "date": "5 August 2024",
       "address": "V9J8+77 Wichit, Amphoe Mueang Phuket, Phuket, Thailand",
       "participants": "4-10",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Stroll through the colorful arts and crafts market and discover handmade treasures. Find unique souvenirs and support local artisans or try some typical thai snacks and meals.",
       "guideImage": "/assets/profiles/guides/MarketGuide.png",
       "guideName": "Aree Wang",
@@ -301,16 +301,15 @@
         "Sunscreen",
         "Water bottle"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": false,
-        "lowIntensity": true,
-        "water": false,
-        "fitness": false,
-        "relaxation": true,
-        "cuisine": true,
-        "nature": false,
-        "culture": true
+        "High": false,
+        "Low": true,
+        "wWitness": false,
+        "Relaxation": true,
+        "Cuisine": false,
+        "Nature": false,
+        "Culture": true
       }
     },
     {
@@ -325,7 +324,7 @@
       "date": "9 August 2024",
       "address": "Kathu Waterfall, Kathu Waterfall, Kathu District, Phuket 83120, Thailand",
       "participants": "6-10",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Ride on challenging trails around the Kathu Waterfall and experience the thrill of descending steep slopes. Enjoy the breathtaking scenery and fresh air.",
       "guideImage": "/assets/profiles/guides/MountainbikingGuide.png",
       "guideName": "James Kaito",
@@ -337,16 +336,16 @@
         "Water bottle",
         "Energy bars"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": true,
-        "lowIntensity": false,
-        "water": false,
-        "fitness": true,
-        "relaxation": false,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": true,
+        "Low": false,
+        "Water": false,
+        "Fitness": false,
+        "Relaxation": true,
+        "Cuisine": false,
+        "Nature": false,
+        "Culture": true
       }
     },
     {
@@ -359,9 +358,9 @@
       "startTime": "5:00 PM",
       "endTime": "9:00 PM",
       "date": "12 August 2024",
-      "address": "Departure from Chalong PierSunrise Road, Chalong, Phuket Province 83230, Thailand",
+      "address": "Departure from Chalong PierSunrise Road, Chalong, Phuket Province 83230",
       "participants": "8-12",
-      "bookingQR": "",
+      "bookingQR": "/assets/qr-codes/bookingQR.png",
       "description": "Experience an unforgettable sunset aboard a cozy boat. Enjoy the stunning views and the serene atmosphere on the water.",
       "guideImage": "/assets/profiles/guides/SunsetGuide.png",
       "guideName": "Kady Nopparat",
@@ -373,16 +372,16 @@
         "Water bottle",
         "Energy bars"
       ],
-      "checkListQR": "",
+      "checkListQR": "/assets/qr-codes/listQR.png",
       "tags": {
-        "highIntensity": false,
-        "lowIntensity": true,
-        "water": true,
-        "fitness": false,
-        "relaxation": true,
-        "cuisine": false,
-        "nature": true,
-        "culture": false
+        "High": false,
+        "Low": true,
+        "Water": true,
+        "Fitness": false,
+        "Relaxation": false,
+        "Cuisine": false,
+        "Nature": true,
+        "Culture": false
       }
     }
   ],
