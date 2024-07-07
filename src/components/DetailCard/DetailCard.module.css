@@ -1,4 +1,226 @@
 .card {
+  width: 280px;
+  height: 460px;
+  border-radius: 15px;
+  background-color: #fcf8f3;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  color: #282625;
+}
+
+.cardContent img {
+  width: 280px;
+  height: 160px;
+  margin-left: -16px;
+  padding-bottom: 16px;
+}
+
+.cardContent {
+  font-family: "Greycliff", sans-serif;
+  height: 444px;
+  padding: 16px;
+  padding-top: 0px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardContent span {
+  font-family: "Greycliff", sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  line-height: 1.1em;
+}
+.cardContent p {
+  font-family: "Greycliff", sans-serif;
+  font-weight: 500;
+  line-height: 1.1em;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.cardContent h1 {
+  font-family: "Greycliff", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+.cardContent h2 {
+  font-family: "Greycliff", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.cardContent :global .description {
+  padding-top: 16px;
+}
+
+.checkList {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 16px;
+  margin: 0;
+}
+
+.checkListItem {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.checkListItem input {
+  margin-right: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-top: 16px;
+}
+
+.tag {
+  background-color: #edd8b9;
+  border-radius: 15px;
+
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.details :global span {
+  font-size: 14px;
+}
+
+.timeParticipantsWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.leftSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ddd;
+  height: 130px;
+  margin: 8px;
+}
+.horizontalSeparator {
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 30px;
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.participants {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.time {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.participants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.locationIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.participantsIcon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrCode img {
+  width: 80px;
+  height: 80px;
+  margin-left: 0px;
+  padding-bottom: 0px;
+}
+
+.qrCode p {
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+}
+
+.guide {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+.guide p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.guide img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding-bottom: 0px;
+}
+
+.guideInfo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+/*.card {
   width: 360px;
   height: 650px;
   border-radius: 15px;
@@ -10,12 +232,13 @@
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 230px;
 }
 
 .cardContent {
   font-family: "Greycliff", sans-serif;
   padding: 24px;
+  padding-top: 0px;
   font-size: 18px;
 }
 .cardContent span {
@@ -35,7 +258,7 @@
   font-family: "Greycliff", sans-serif;
   font-weight: bold;
   font-size: 32px;
-  /* margin: 10px; */
+ 
 }
 .cardContent h2 {
   font-family: "Greycliff", sans-serif;
@@ -61,9 +284,9 @@
 
 .tags {
   display: flex;
-  gap: 10px;
+  gap: 6px;
+  justify-content: left;
   margin-bottom: 20px;
-  /* margin-left: 10px; */
 }
 
 .tag {
@@ -131,8 +354,8 @@
 
 .participants {
   display: flex;
-  flex-direction: column; /* Use column direction for centering vertically */
-  align-items: center; /* Ensure items are centered */
+  flex-direction: column;
+  align-items: center; 
   gap: 5px;
 }
 
@@ -140,7 +363,6 @@
   width: 44px;
   height: 44px;
   margin-right: 14px;
- 
 }
 
 .participantsIcon {
@@ -173,14 +395,4 @@
   display: flex;
   flex-direction: column;
   font-weight: 500;
-}
-
-/* .scanSection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.scanSection strong {
-  flex: 1;
-} */
+}*/

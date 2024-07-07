@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from "react";
 import styles from "./Gallery.module.css";
 import { Popup } from "react-map-gl";
 import GalleryImage from "../../components/GalleryImage/GalleryImage";
-
 import interact from "interactjs";
 
-//Jenny: Aufbau der Bilder Gallerie
-function Gallery({ selectedActivity, setSelectedActivity }) {
-  const popupContentRef = useRef(null);
+//Yara: Ermöglichung der Rotation von Elementen bei längerem Gedrückthalten
+//Jenny: Aufbau der Gallerie -> Zeigen von Bildern & Videos als Erinnerungs- und Reflektionsmöglichkeit; Einbindung der Daten in Abhängigkeit der geklickten Aktivität;
 
+function Gallery({ selectedActivity, setSelectedActivity }) {
+  //Rotieren des Elements, wenn länger gedrückt gehalten wird
+  const popupContentRef = useRef(null);
   useEffect(() => {
     if (popupContentRef.current) {
       let isRotated = false;
@@ -33,8 +34,8 @@ function Gallery({ selectedActivity, setSelectedActivity }) {
         style={{ maxWidth: "600px" }}
       >
         <div ref={popupContentRef} className={styles.Images}>
-          {" "}
-          {console.log("selected Activity: " + selectedActivity.id)}
+          {/* Aufrufen der Galleriebilder */}
+
           <GalleryImage activityID={selectedActivity.id} />
         </div>
       </Popup>

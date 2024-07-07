@@ -5,23 +5,20 @@ import Profiles from "../../pages/Profile/Profile";
 import Details from "../../pages/Details/Details";
 import Gallery from "../../pages/Gallery/Gallery";
 
-//ADD: Styling of Buttons
-//Jenny: Öffnen der Ebenen in Abhängigkeit der geklickten Aktivität und Option
+//Jenny: Aufbau der Optionen Buttons; Ebenen Logik in Abhängigkeit der geklickten Aktivität und Option
 
 function OptionButtons({ selectedActivity, setSelectedActivity }) {
   const [activeComponent, setActiveComponent] = useState(null);
   const [type, setType] = useState(["details", "profiles", "gallery"]);
-
   const [selectedOption, setSelectedOption] = useState(null);
 
-  //Resettet alles auf null wenn eine neue Aktivität angeklickt wurde
+  //Setzt alles auf null zurück, wenn eine neue Aktivität angeklickt wurde
   useEffect(() => {
     setActiveComponent(null);
     setSelectedOption(null);
   }, [selectedActivity]);
 
   //Setzt die Position des Popups entsprechend welcher Button geklickt wurde
-  //Nochmal prüfen warum die Richtung der anchor Position nicht
   const getAnchorPosition = (type) => {
     if (type === "details") {
       return "top";
@@ -32,6 +29,7 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
     }
   };
 
+  //Definiert den Text für den Button der Optionen
   const showButtonText = (item) => {
     if (item === "details") {
       return "DETAILS";
@@ -87,7 +85,6 @@ function OptionButtons({ selectedActivity, setSelectedActivity }) {
                 style={{ maxWidth: "600px" }}
                 className={styles.PopupCustom}
               >
-                {" "}
                 <button
                   onClick={(e) => {
                     e.preventDefault();

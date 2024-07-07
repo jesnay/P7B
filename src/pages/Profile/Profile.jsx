@@ -9,9 +9,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-//Jenny: Darstellung der Profile als vertikaler Carousel
+//Yara: Ermöglichung der Rotation von Elementen bei längerem Gedrückthalten
+//Jenny: Aufbau des Profil-Sliders -> Aufzeigen von Hostelbewohner, die bereits eine Aktivität unternommen haben; Einbindung der Daten in Abhängigkeit der geklickten Aktivität und welche Person an der ausgewählten Aktivität teilgenommen hat;
 
 function Profiles({ selectedActivity, setSelectedActivity }) {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
   //Prüft, welche Personen die ausgewählte Aktivität bereits gemacht haben
   const getProfilesForActivity = (activityID) => {
     const profilesForActivity = data.profiles.filter((profile) =>
@@ -22,16 +25,13 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
 
   const profilesForActivity = getProfilesForActivity(selectedActivity.id);
 
-  //Einstellungen für das Carousel -> man kann bisher nur horizontal swipen, muss noch eine Lösung gefunden werden
-  const [imageIndex, setImageIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(1);
-
+  //Setzt das aktive Profil fest bei jedem swipe
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
   };
 
+  //Rotieren des Elements, wenn länger gedrückt gehalten wird
   const popupContentRef = useRef(null);
-
   useEffect(() => {
     if (popupContentRef.current) {
       let isRotated = false;
@@ -56,6 +56,7 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
         style={{ maxWidth: "600px" }}
       >
         <div ref={popupContentRef} className={styles.Slider}>
+          {/* Darstellung der Profile */}
           <Swiper
             direction={"vertical"}
             slidesPerView={3}
@@ -68,8 +69,7 @@ function Profiles({ selectedActivity, setSelectedActivity }) {
             onSlideChange={handleSlideChange}
           >
             {profilesForActivity.map((profile, index) => (
-              //Erstellt für jede Person, die an einer Aktivität teilgenommen hat eine Bubble
-
+              //Erstellt für jede Person, die an einer Aktivität teilgenommen hat einen Slide
               <SwiperSlide key={profile.id}>
                 <div className={styles.ProfileBubbleContainer}>
                   <ProfileBubble

@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/mapbox-gl": "^3.1.0",
+    "d3-ease": "^3.0.1",
     "interactjs": "^1.10.27",
     "mapbox-gl": "^3.4.0",
     "osc-js": "^2.4.1",

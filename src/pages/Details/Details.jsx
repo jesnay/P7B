@@ -2,27 +2,20 @@ import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
 import { Popup } from "react-map-gl";
 import styles from "./Details.module.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-
-// import required modules
 import { EffectCards } from "swiper/modules";
+import DetailCard from "../../components/DetailCard/DetailCard";
+import InformationCard from "../../components/DetailCard/InformationCard";
+import ChecklistCard from "../../components/DetailCard/ChecklistCard";
 
-//Jenny: Popup anhängig der geklickten Aktivität anzeigen
-import DetailCard from "../../components/DetailCard/DetailCard"; // Import DetailCard
-import InformationCard from "../../components/DetailCard/InformationCard"; // Import InformationCard
-import ChecklistCard from "../../components/DetailCard/ChecklistCard"; // Import ChecklistCard 
-
+//Yara: Aufbau der Detail-,Informations- & Checklist Cards -> Darstellung der wichtigsten Informationen für eine Aktivität; Aufbau der Datenbank (Json) mit unterschiedlichen Aktivitäten; Ermöglichung der Rotation von Elementen bei längerem Gedrückthalten
+//Jenny: Einbindung der Daten in Abhängigkeit der geklickten Aktivität; Einbau der Swiping-Animation
 
 function Details({ selectedActivity, setSelectedActivity }) {
-  console.log("Details" + selectedActivity);
-  console.log(selectedActivity.name);
+  //Rotieren des Elements, wenn länger gedrückt gehalten wird
   const popupContentRef = useRef(null);
-
   useEffect(() => {
     if (popupContentRef.current) {
       let isRotated = false;
@@ -47,6 +40,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
         style={{ maxWidth: "600px" }}
       >
         <div ref={popupContentRef} className={styles.Cards}>
+          {/* 3 Cards inklusive Animation */}
           <Swiper
             effect={"cards"}
             grabCursor={true}
@@ -56,13 +50,13 @@ function Details({ selectedActivity, setSelectedActivity }) {
             observeParents={true}
           >
             <SwiperSlide>
-              <DetailCard />
+              <DetailCard activityID={selectedActivity.id} />
             </SwiperSlide>
             <SwiperSlide>
-              <InformationCard />
+              <InformationCard activityID={selectedActivity.id} />
             </SwiperSlide>
             <SwiperSlide>
-              <ChecklistCard />
+              <ChecklistCard activityID={selectedActivity.id} />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -72,37 +66,3 @@ function Details({ selectedActivity, setSelectedActivity }) {
 }
 
 export default Details;
-/*<SwiperSlide>
-              <DetailCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <DetailCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <DetailCard />
-            </SwiperSlide>*/
-/*<Popup
-        latitude={selectedActivity.latitude}
-        longitude={selectedActivity.longitude}
-        closeOnClick={false}
-        onClose={() => setSelectedActivity(null)}
-        anchor="top"
-        className={styles.PopupCustom}
-      > */
-
-/*<Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>*/
