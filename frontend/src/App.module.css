@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Greycliff";
+  src: url("./fonts/GreyCliff/Greycliff-CF-Light.otf") format("opentype");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("./fonts/GreyCliff/Greycliff-CF-Regular.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Greycliff";
+  src: url("./fonts/GreyCliff/Greycliff-CF-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+.Btn {
+  position: absolute;
+  width: 150px;
+  bottom: 40px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4674e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
