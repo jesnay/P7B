@@ -1,0 +1,96 @@
+.ObjectRecognition {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+}
+
+.Map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.ObjectRecognition :global h2 {
+  margin-top: 0px;
+}
+
+.ObjectRecognition :global .text {
+  background-color: #fcf8f4;
+  width: fit-content;
+  padding: 20px;
+}
+
+.ObjectRecognition :global button {
+  width: 150px;
+  height: 150px;
+}
+
+.ObjectRecognition :global .one {
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 400px;
+  left: 750px;
+}
+
+.OptionBtn :global button {
+  background-color: #fcf8f4;
+  border: none;
+  border-radius: 8px;
+  height: 60px;
+  width: fit-content;
+  font-family: "Greycliff", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  padding: 12px 32px;
+}
+.OptionBtn {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 150px;
+  position: fixed;
+  top: 340px;
+  left: 483px;
+}
+.OptionBtn :global .div1 {
+  display: flex;
+  gap: 150px;
+}
+.OptionBtn :global .div2 {
+  padding-left: 60px;
+}
+
+.GalleryImg {
+  width: 700px;
+  position: fixed;
+  top: 20px;
+  right: 170px;
+}
+
+.ProfileImg {
+  height: 500px;
+  position: fixed;
+  top: 20px;
+  left: 480px;
+}
+
+.CardsImg {
+  height: 500px;
+  position: fixed;
+  bottom: -10px;
+  left: 700px;
+}
+
+.OptionBtn :global .active {
+  visibility: visible;
+}
+
+.OptionBtn :global .inactive {
+  visibility: hidden;
+}
