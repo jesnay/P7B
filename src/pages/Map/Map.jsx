@@ -57,7 +57,7 @@ function ActivityMap() {
         onMove={(evt) => setViewport(evt.viewState)}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         onClick={handleMapClick}
-        mapStyle="mapbox://styles/stjesnay/clxg1yzc2007301pc4ard48tg"
+        mapStyle="mapbox://styles/stjesnay/clxizeum100ae01pd78nn825u"
         dragRotate={true}
         touchRotate={true}
         touchZoomRotate={true}
