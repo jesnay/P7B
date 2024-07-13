@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 import ActivityMap from "./pages/Map/Map";
 import ObjectRecognition from "./pages/ObjectRecognition/ObjectRecognition";
 
-//Aufrufen der Map. Alle weiteren Komponenten sind abhängig von der Map
+//Hier wird der jeweilige Prototyp aufgrufen. Es kann per Button gewählt werden zwischen den 2 Prototypen
 function App() {
   const [showMap, setShowMap] = useState(true);
 
@@ -16,7 +16,6 @@ function App() {
       {showMap ? (
         <ActivityMap className={styles.Prototype}></ActivityMap>
       ) : (
-        //Add Description how to use
         <ObjectRecognition />
       )}
 

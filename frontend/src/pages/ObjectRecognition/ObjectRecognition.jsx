@@ -6,6 +6,8 @@ import { ReactComponent as Marker } from "./assets/Cuisine.svg";
 import { ReactComponent as Cards } from "./assets/Cards.svg";
 import styles from "./ObjectRecognition.module.css";
 
+//Jenny: Testen der Mulitouchfunktionen, sodass ein Objekt genutzt werden kann, um die Aktivitäten zu öffnen und gleichzeitig das Interface genutzt werden kann. Wird das Pbjekt entfernt schließt sich alles automatisch
+
 function ObjectRecognition() {
   const [touchPositions, setTouchPositions] = useState([]);
   const [firstTouch, setFirstTouch] = useState(null);
@@ -13,6 +15,7 @@ function ObjectRecognition() {
   const [showElement, setShowElement] = useState(null);
   const [hideOptions, setHideOptions] = useState(null);
 
+  //Die Touchpunkte auf der Oberfläche werden von dem Tuio-Client geholt und gespeichert. Jeder neue Touchpunkt wird gespeichert
   useEffect(() => {
     const fetchData = () => {
       fetch("http://localhost:3000")
@@ -70,6 +73,9 @@ function ObjectRecognition() {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  //Hier wird statisch getestet ob ich ein Touch innerhalb bestimmter Punkte befindet, um eine Aktion auszulösen
+  //Für jeden Touchpunkt wird geprüft, ob er sich auf dem Marker der Map befindet. Wenn ja, öffnen sich die Optionen und es wird wiederrum geprüft ob ein zweiter Touchpunkt sich auf einem der Optionen bedinfen. Daraufhin wird entweder die Details, die Gallery oder die Profile geöffnet
 
   useEffect(() => {
     let newFirstTouch = null;
@@ -129,6 +135,8 @@ function ObjectRecognition() {
       }
     });
   }, [touchPositions]);
+
+  //Darstellung der Elemente in Abhängigkeit voneinander
 
   return (
     <div className={styles.ObjectRecognition}>
