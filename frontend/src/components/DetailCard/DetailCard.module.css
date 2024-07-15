@@ -4,7 +4,7 @@
   border-radius: 15px;
   background-color: #fcf8f3;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+
   color: #282625;
 }
 
@@ -18,6 +18,7 @@
 .cardContent {
   font-family: "Greycliff", sans-serif;
   height: 444px;
+  width: 280px;
   padding: 16px;
   padding-top: 0px;
   font-size: 18px;
