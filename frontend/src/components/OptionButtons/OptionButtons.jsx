@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./OptionButtons.module.css";
 import { Popup } from "react-map-gl";
 import Profiles from "../../pages/Profile/Profile";
@@ -9,7 +9,7 @@ import Gallery from "../../pages/Gallery/Gallery";
 
 function OptionButtons({ selectedActivity, setSelectedActivity }) {
   const [activeComponent, setActiveComponent] = useState(null);
-  const [type, setType] = useState(["details", "profiles", "gallery"]);
+  const [type] = useState(["details", "profiles", "gallery"]);
   const [selectedOption, setSelectedOption] = useState(null);
 
   //Setzt alles auf null zurück, wenn eine neue Aktivität angeklickt wurde

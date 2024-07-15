@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "./GalleryImage.module.css";
 import galleryImage from "../../data/activity.json";
 
@@ -7,7 +7,7 @@ import galleryImage from "../../data/activity.json";
 function GalleryImage({ activityID }) {
   return (
     <div className={styles.GalleryImage}>
-      <img src={galleryImage.gallery[activityID].images}></img>
+      <img src={galleryImage.gallery[activityID].images} alt="Gallery"></img>
     </div>
   );
 }

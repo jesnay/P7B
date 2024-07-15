@@ -8,10 +8,7 @@ const DetailCard = ({ activityID }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardContent}>
-        <img
-          src={Activity.details[activityID].activityImage}
-          alt="Header image"
-        />
+        <img src={Activity.details[activityID].activityImage} alt="Header" />
         <h1>{Activity.details[activityID].name}</h1>
         <div className={styles.tags}>
           {Object.entries(Activity.details[activityID].tags).map(

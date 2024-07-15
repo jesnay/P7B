@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import ReactMapGL from "react-map-gl";
-import Map, { Marker, Popup } from "react-map-gl";
+import { Marker } from "react-map-gl";
 import styles from "./Map.module.css";
 import Activity from "../../data/activity.json";
 import OptionButtons from "../../components/OptionButtons/OptionButtons";
@@ -81,7 +81,7 @@ function ActivityMap() {
                   centerMap(item);
                 }}
               >
-                <img src={item.markerImage} />
+                <img src={item.markerImage} alt="home marker" />
               </button>
             </Marker>
           );
@@ -100,7 +100,11 @@ function ActivityMap() {
               centerMap(Activity.home);
             }}
           >
-            <img src={Activity.home.markerImage} className="homeIcon" />
+            <img
+              src={Activity.home.markerImage}
+              className="homeIcon"
+              alt="marker"
+            />
           </button>
         </Marker>
 

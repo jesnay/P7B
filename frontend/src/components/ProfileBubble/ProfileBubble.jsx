@@ -7,7 +7,7 @@ import Profiles from "../../data/activity.json";
 function ProfileBubble({ profileID, isActive }) {
   return (
     <div className={styles.ProfileBubble}>
-      <img src={Profiles.profiles[profileID].image}></img>
+      <img src={Profiles.profiles[profileID].image} alt="profile"></img>
       {/* Checkt, ob die Profil Bubble grade aktiv ist und zeigt dann Text an */}
       <div className={isActive === true ? "text activeText" : "text"}>
         <p className="name">{Profiles.profiles[profileID].name}</p>

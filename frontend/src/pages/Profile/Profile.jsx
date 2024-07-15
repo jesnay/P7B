@@ -13,7 +13,6 @@ import { Pagination } from "swiper/modules";
 //Jenny: Aufbau des Profil-Sliders -> Aufzeigen von Hostelbewohner, die bereits eine Aktivität unternommen haben; Einbindung der Daten in Abhängigkeit der geklickten Aktivität und welche Person an der ausgewählten Aktivität teilgenommen hat;
 
 function Profiles({ selectedActivity, setSelectedActivity }) {
-  const [imageIndex, setImageIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1);
   //Prüft, welche Personen die ausgewählte Aktivität bereits gemacht haben
   const getProfilesForActivity = (activityID) => {
