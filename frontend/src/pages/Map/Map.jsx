@@ -87,6 +87,23 @@ function ActivityMap() {
           );
         })}
 
+        <Marker
+          longitude={Activity.home.longitude}
+          latitude={Activity.home.latitude}
+          anchor="bottom"
+        >
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setSelectedActivity(null);
+              e.stopPropagation();
+              centerMap(Activity.home);
+            }}
+          >
+            <img src={Activity.home.markerImage} className="homeIcon" />
+          </button>
+        </Marker>
+
         {selectedActivity ? (
           //Wenn eine Aktivität angeklickt wurde werden 3 Optionen (details, profiles und gallery) zur Auswahl angezeigt
           <div className={styles.Options}>

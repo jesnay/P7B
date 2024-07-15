@@ -1,4 +1,9 @@
 {
+  "home": {
+    "longitude": 98.38031505271418,
+    "latitude": 7.847567432143421,
+    "markerImage": "/assets/markers/Home.svg"
+  },
   "details": [
     {
       "id": 0,
