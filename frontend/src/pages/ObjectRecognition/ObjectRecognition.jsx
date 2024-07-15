@@ -140,7 +140,7 @@ function ObjectRecognition() {
 
   return (
     <div className={styles.ObjectRecognition}>
-      <img src={Map} className={styles.Map} />
+      <img src={Map} className={styles.Map} alt="map" />
       <div className="text">
         <h2>Touch Tracker</h2>
         {touchPositions.map((pos) => (
@@ -176,10 +176,10 @@ function ObjectRecognition() {
           </div>
           {showElement === "details" && <Cards className={styles.CardsImg} />}
           {showElement === "gallery" && (
-            <img src={GalleryImg} className={styles.GalleryImg} />
+            <img src={GalleryImg} className={styles.GalleryImg} alt="gallery" />
           )}
           {showElement === "profiles" && (
-            <img src={ProfileImg} className={styles.ProfileImg} />
+            <img src={ProfileImg} className={styles.ProfileImg} alt="profile" />
           )}
         </div>
       )}
