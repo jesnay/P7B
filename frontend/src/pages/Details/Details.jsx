@@ -39,27 +39,27 @@ function Details({ selectedActivity, setSelectedActivity }) {
         className={styles.PopupCustom}
         style={{ maxWidth: "600px" }}
       >
-        {/* 3 Cards inklusive Animation */}
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-          observer={true}
-          observeParents={true}
-          ref={popupContentRef}
-        >
-          <SwiperSlide>
-            <DetailCard activityID={selectedActivity.id} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <InformationCard activityID={selectedActivity.id} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ChecklistCard activityID={selectedActivity.id} />
-          </SwiperSlide>
-        </Swiper>
-        {/*<div ref={popupContentRef} className={styles.Cards}></div>*/}
+        <div ref={popupContentRef} className={styles.Cards}>
+          {/* 3 Cards inklusive Animation */}
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+            observer={true}
+            observeParents={true}
+          >
+            <SwiperSlide>
+              <DetailCard activityID={selectedActivity.id} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <InformationCard activityID={selectedActivity.id} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ChecklistCard activityID={selectedActivity.id} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </Popup>
     </div>
   );
