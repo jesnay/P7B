@@ -19,7 +19,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
   useEffect(() => {
     if (popupContentRef.current) {
       let isRotated = false;
-
+      popupContentRef.current.style.transform = "rotate(0deg)";
       interact(popupContentRef.current).on("hold", function (event) {
         isRotated = !isRotated;
         const rotationDegree = isRotated ? 180 : 0;
