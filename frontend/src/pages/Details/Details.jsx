@@ -48,6 +48,7 @@ function Details({ selectedActivity, setSelectedActivity }) {
             className="mySwiper"
             observer={true}
             observeParents={true}
+            observeSlideChildren={true}
           >
             <SwiperSlide>
               <DetailCard activityID={selectedActivity.id} />
