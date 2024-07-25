@@ -1,7 +1,7 @@
 # ConnecTable
 ### Anforderungen
 
-- Multitouch-Gerät, welches horizontal einstellbar ist. Hierfür wurde (Gerätenahme Fernseher) verwendet mit der Multitouch Frame PQLabs G4 Software (https://www.pqlabs.com/support-touch-screen.html)
+- Multitouch-Gerät, welches horizontal einstellbar ist. Hierfür wurde (Gerätename Fernseher) verwendet mit der Multitouch Frame PQLabs G4 Software (https://www.pqlabs.com/support-touch-screen.html)
 - Die Software muss auf dem Gerät installiert sein: https://www.pqlabs.com/support-touch-screen.html
 - Auflösung von 3072 × 1920 (verwendetes Gerät MacBook Pro 2019)
 
