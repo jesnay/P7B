@@ -2,6 +2,7 @@
 ### Anforderungen
 
 - Multitouch-Gerät, welches horizontal einstellbar ist. Hierfür wurde (Gerätenahme Fernseher) verwendet mit der Multitouch Frame PQLabs G4 Software (https://www.pqlabs.com/support-touch-screen.html)
+- Die Software muss auf dem Gerät installiert sein: https://www.pqlabs.com/support-touch-screen.html
 - Auflösung von 3072 × 1920 (verwendetes Gerät MacBook Pro 2019)
 
 > [!IMPORTANT]
@@ -64,7 +65,7 @@ cd frontend
 ```
 
 > [!NOTE]
-> Für den Prototypen und die Darstellung der Map wurde die API von Mapbox verwendet. Um die Map aufzurufen muss ein Token hinzugefügt werden. Diesen findest Du hier (Abgabeordner nennen)
+> Für den Prototypen und die Darstellung der Map wurde die API von Mapbox verwendet. Um die Map aufzurufen muss ein Token hinzugefügt werden. Diesen findest Du in der Betriebsanleitung im Abgabeordner.
 
 4. Im Frontend Ordner erstelle eine neue Datei mit der Benennung .env.local
 
@@ -93,7 +94,6 @@ Nun öffnet sich das Interface in deinem Browser
 > Opera: Shift + command + F\
 > Chrome: Unter View entferne den Haken bei “Always Show Toolbar in Full Screen”\
 > Safari: Unter View entferne den Haken bei “Always Show Toolbar in Full Screen”\
-> DuckDuckGo:
 
 > [!NOTE]
 > Das Ausblenden der Browserelemente und Anzeigen des Interfaces im Vollbildmodus dient dem zweiten Prototypen, da dieser aktuell auf statische Punkte eingestellt ist und auf einen Vollbildmodus angewiesen ist.
