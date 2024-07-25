@@ -5,17 +5,17 @@
 - Auflösung von 3072 × 1920 (verwendetes Gerät MacBook Pro 2019)
 
 > [!IMPORTANT]
-> Der Prototyp ist aktuell zugeschnitten auf diese Geräte und kann bei Nutzung anderer Geräte abweichen. Dies ist der erste funktionierende Prototyp für das Projekt “ConnecTable” und wurde in diesem Schritt nur für diese Geräte entwickelt.
+> Der Prototyp ist aktuell zugeschnitten auf diese Geräte und kann bei Nutzung anderer Geräte abweichen. Dies ist der erste funktionierende Prototyp für das Projekt “connecTable” und wurde in diesem Schritt nur für diese Geräte entwickelt.
 
 
-## Step 1: Projekt klonen und öffnen
+## Schritt 1: Projekt klonen und öffnen
 
 1. Klone das Projekt aus dem Github-Repository oder lade die ZIP-Datei runter
 2. Öffne das Projekt in deinem Code-Editor (Empfohlen: Visual Studio Code)
 3. Sichtbar müssen 2 Ordner sein: backend & frontend
 
 
-## Step 2: Multitouch Gerät verbinden
+## Schritt 2: Multitouch Gerät verbinden
 
 1. Schließe das Multitouch Gerät an deinen Laptop an.
    - Hier wurde ein HDMI Kabel für den Anschluss an den Fernseher verwendet
@@ -23,7 +23,7 @@
 2. Der Bildschirm deines Laptops muss auf dem Multitouch Gerät sichtbar sein und sollte auf Touch Bewegungen auf dem Display reagieren.
 
 
-## Step 3: Starten des TUIO-Clients
+## Schritt 3: Starten des TUIO-Clients
 
 Um Multitouch verwenden zu können muss zunächst der TUIO-Client gestartet werden, um die Daten des Multitouch Treibers abfangen und nutzen zu können.
 
@@ -44,7 +44,7 @@ Server is running on [http://localhost:3000](http://localhost:3000/)
 ```
 
 
-## Step 4: Starten des Interfaces
+## Schritt 4: Starten des Interfaces
 
 1. Öffne ein neues Terminal Fenster
    
@@ -85,18 +85,9 @@ npm install
 npm start
 ```
 
-7. Sollte folgendes angezeigt werden, gebe Y ein. 
-
-```bash
-? Something is already running on port 3000.
-
-Would you like to run the app on another port instead? › (Y/n)
-
-```
-
 Nun öffnet sich das Interface in deinem Browser
 
-8. Stelle deinen Browser nun so ein, dass er auf Vollbildmodus ist. Es soll nur das Interface angezeigt werden, d.h. keine Tabbar oder weitere Elemente des Browsers. 
+7. Stelle deinen Browser nun so ein, dass er auf Vollbildmodus ist. Es soll nur das Interface angezeigt werden, d.h. keine Tabbar oder weitere Elemente des Browsers. 
 
 > [!TIP]
 > Opera: Shift + command + F\
@@ -110,6 +101,6 @@ Nun öffnet sich das Interface in deinem Browser
 Wenn alle Schritte erfolgreich ausgeführt wurden kannst du nun die Prototypen nutzen. Standardmäßig wird der erste Prototyp, die Map, angezeigt.
 
 
-## Step 5: Prototyp wechseln
+## Schritt 5: Prototyp wechseln
 
 1. Um zwischen den Prototypen zu wechseln, klicke auf den Button in der unteren rechten Ecke.  Dieser bringt dich zum zweiten Prototypen, dem Multitouch Test, und zurück.
